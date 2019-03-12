@@ -1,4 +1,4 @@
-package leetcode
+package _003
 
 import "testing"
 

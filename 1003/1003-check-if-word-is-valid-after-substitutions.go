@@ -1,4 +1,4 @@
-package leetcode
+package _003
 
 /*
 1003. Check If Word Is Valid After Substitutions

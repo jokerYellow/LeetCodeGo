@@ -1,4 +1,4 @@
-package leetcode
+package _74
 
 /*
 https://leetcode.com/problems/dungeon-game/
