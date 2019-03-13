@@ -32,64 +32,49 @@ For example, given the dungeon below, the initial health of the knight must be a
 
 */
 
-type hp struct {
-	Sum int
-	K   int
-}
-
 func calculateMinimumHP(dungeon [][]int) int {
-	coloumn := len(dungeon)
-	row := len(dungeon[0])
-	rt := calculateMinimumHPDetail(dungeon, coloumn-1, row-1)
-	min := -1
-	for _, v := range rt {
-		if min == -1 {
-			min = v.K
-			continue
-		} else if min > v.K {
-			min = v.K
-		}
-	}
-	return min
-}
-
-func calculateMinimumHPDetail(dungeon [][]int, row, column int) []hp {
-	if row == -1 || column == -1 {
-		return []hp{hp{-1, -1}}
-	}
-	if row == 0 && column == 0 {
-		p := dungeon[0][0]
-		if p > 0 {
-			return []hp{hp{1 + p, 1}}
+	min := func(a, b int) int {
+		if a < b {
+			return a
 		} else {
-			return []hp{hp{1, 1 - p}}
+			return b
 		}
 	}
-	items := []hp{}
-	tops := calculateMinimumHPDetail(dungeon, row-1, column)
-	lefts := calculateMinimumHPDetail(dungeon, row, column-1)
-	for _, t := range tops {
-		items = append(items, t)
-	}
-	for _, t := range lefts {
-		items = append(items, t)
-	}
 
-	p := dungeon[row][column]
-
-	rt := []hp{}
-	for _, t := range items {
-		if t.K < 0 {
-			continue
-		}
-		nk := 0
-		if t.Sum+p > 0 {
-			nk = t.K
-
+	max := func(a, b int) int {
+		if a > b {
+			return a
 		} else {
-			nk = t.K - t.Sum - p + 1
+			return b
 		}
-		rt = append(rt, hp{nk - t.K + t.Sum + p, nk})
 	}
-	return rt
+
+	row := len(dungeon)
+
+	if row == 0 || dungeon == nil {
+		return 0
+	}
+
+	column := len(dungeon[0])
+
+	hp := make([][]int, row)
+	for i := range hp {
+		hp[i] = make([]int, column)
+	}
+
+	for i := row - 1; i >= 0; i-- {
+		for j := column - 1; j >= 0; j-- {
+			if i == row-1 && j == column-1 {
+				hp[i][j] = max(1, 1-dungeon[i][j])
+			} else if i == row-1 {
+				hp[i][j] = max(1, hp[i][j+1]-dungeon[i][j])
+			} else if j == column-1 {
+				hp[i][j] = max(1, hp[i+1][j]-dungeon[i][j])
+			} else {
+				hp[i][j] = min(max(1, hp[i+1][j]-dungeon[i][j]), max(1, hp[i][j+1]-dungeon[i][j]))
+			}
+		}
+	}
+
+	return hp[0][0]
 }
