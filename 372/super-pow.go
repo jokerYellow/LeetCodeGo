@@ -30,15 +30,15 @@ func superPow(a int, b []int) int {
 	rt := 1
 	for i, v := range b {
 		if i == 0 {
-			rt = (rt * powMod(a, v, mod)) % mod
+			rt = (rt * powerAndMod(a, v, mod)) % mod
 		} else {
-			rt = ((powMod(rt, 10, mod) % mod) * (powMod(a, v, mod) % mod)) % mod
+			rt = ((powerAndMod(rt, 10, mod) % mod) * (powerAndMod(a, v, mod) % mod)) % mod
 		}
 	}
 	return rt
 }
 
-func powMod(a, p, mod int) int {
+func powerAndMod(a, p, mod int) int {
 	r := 1
 	for p > 0 {
 		r = (r * a) % mod
