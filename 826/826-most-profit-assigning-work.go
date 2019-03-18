@@ -1,4 +1,4 @@
-package _26
+package leetcode
 
 /*
 826. Most Profit Assigning Work

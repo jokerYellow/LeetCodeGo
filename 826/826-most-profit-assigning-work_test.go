@@ -1,5 +1,5 @@
 
-package _26
+package leetcode
 
 import (
 	"testing"
