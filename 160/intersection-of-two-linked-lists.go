@@ -53,7 +53,7 @@ If the two linked lists have no intersection at all, return null.
 The linked lists must retain their original structure after the function returns.
 You may assume there are no cycles anywhere in the entire linked structure.
 Your code should preferably run in O(n) time and use only O(1) memory.
- */
+*/
 
 /**
 * Definition for singly-linked list.
@@ -61,7 +61,7 @@ Your code should preferably run in O(n) time and use only O(1) memory.
 *     Val int
 *     Next *ListNode
 * }
-*/
+ */
 
 type ListNode struct {
 	Val  int
@@ -69,6 +69,36 @@ type ListNode struct {
 }
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
+	return getIntersectionNode2(headA, headB)
+}
+
+/*
+ 2,6,3,4,5
+ 1,2,4,5
+
+ 2,6,3,4,1,2,4,5
+ 1,2,4,2,6,3,4,5
+*/
+func getIntersectionNode2(headA, headB *ListNode) *ListNode {
+	ha := headA
+	hb := headB
+	for ha != hb {
+		if ha == nil {
+			ha = headB
+		} else {
+			ha = ha.Next
+		}
+
+		if hb == nil {
+			hb = headA
+		} else {
+			hb = hb.Next
+		}
+	}
+	return ha
+}
+
+func getIntersectionNode1(headA, headB *ListNode) *ListNode {
 	lengthA := length(headA)
 	lengthB := length(headB)
 
@@ -105,7 +135,7 @@ func move(node *ListNode, step int) *ListNode {
 	}
 	var rt = node
 	for {
-		if rt.Next == nil{
+		if rt.Next == nil {
 			return nil
 		}
 		rt = rt.Next
@@ -118,13 +148,13 @@ func move(node *ListNode, step int) *ListNode {
 }
 
 func length(head *ListNode) int {
-	if head == nil{
+	if head == nil {
 		return 0
 	}
 	length := 1
 	for {
 		if head.Next != nil {
-			length ++
+			length++
 			head = head.Next
 		} else {
 			break
