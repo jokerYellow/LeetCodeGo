@@ -43,6 +43,10 @@ type ListNode struct {
 }
 
 func middleNode(head *ListNode) *ListNode {
+	return middleNode2(head)
+}
+
+func middleNode1(head *ListNode) *ListNode {
 	var length = 0
 	c := head
 	for {
@@ -63,4 +67,14 @@ func middleNode(head *ListNode) *ListNode {
 		rt = rt.Next
 	}
 	return rt
+}
+
+func middleNode2(head *ListNode) *ListNode {
+	p1 := head
+	p2 := head
+	for p2 != nil && p2.Next != nil {
+		p1 = p1.Next
+		p2 = p2.Next.Next
+	}
+	return p1
 }

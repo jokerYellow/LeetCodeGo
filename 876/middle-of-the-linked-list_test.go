@@ -27,6 +27,15 @@ func Test3(t *testing.T) {
 	}
 }
 
+func Test4(t *testing.T) {
+	head := generateLinkList([]int{1, 2})
+	expect := 2
+	output := middleNode(head).Val
+	if expect != output {
+		t.Fail()
+	}
+}
+
 func generateLinkList(arr []int) *ListNode {
 	var link *ListNode
 	var head *ListNode
