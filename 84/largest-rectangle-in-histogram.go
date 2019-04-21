@@ -34,6 +34,44 @@ Output: 10
 */
 
 func largestRectangleArea(heights []int) int {
+
+	max := func(l, r int) int {
+		if l > r {
+			return l
+		}
+		return r
+	}
+
+	length := len(heights)
+	lessLeft := make([]int, length)
+	lessRight := make([]int, length)
+
+	for i := 0; i < length; i++ {
+		p := i
+		for p >= 0 && heights[p] >= heights[i] {
+			p = p - 1
+		}
+		lessLeft[i] = p + 1
+	}
+
+	for i := length - 1; i >= 0; i-- {
+		p := i
+		for p <= (length-1) && heights[p] >= heights[i] {
+			p = p + 1
+		}
+		lessRight[i] = p - 1
+	}
+
+	maximum := 0
+
+	for i := 0; i < length; i++ {
+		maximum = max(maximum, (lessRight[i]-lessLeft[i]+1)*heights[i])
+	}
+
+	return maximum
+}
+
+func largestRectangleArea1(heights []int) int {
 	return largestRectangleAreaReturnWithWidth(heights, 0)
 }
 
