@@ -21,3 +21,17 @@ func GenerateLinkList(arr []int) *ListNode {
 	}
 	return head
 }
+
+func EqualStrings(l, r []string) bool {
+	if len(l) != len(r) {
+		return false
+	}
+	i := 0
+	for i < len(l) {
+		if l[i] != r[i] {
+			return false
+		}
+		i++
+	}
+	return true
+}
