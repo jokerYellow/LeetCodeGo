@@ -1,7 +1,5 @@
 package leetcode
 
-import "fmt"
-
 /*
 https://leetcode.com/problems/4sum-ii/
 454. 4Sum II
@@ -36,21 +34,17 @@ The two tuples are:
  */
 
 func fourSumCount(A []int, B []int, C []int, D []int) int {
-	fmt.Println(len(A))
-	Dmap := map[int]int{}
-	for _, v := range D {
-		Dmap[v] ++
+	sumInfo := map[int]int{}
+	for _, d := range D {
+		for _, c := range C{
+			sumInfo[d+c] ++
+		}
 	}
 
 	count := 0
 	for _, a := range A {
 		for _, b := range B {
-			for _, c := range C {
-				t := 0 - (a + b + c)
-				if Dmap[t] != 0 {
-					count += Dmap[t]
-				}
-			}
+			count += sumInfo[-a-b]
 		}
 	}
 
