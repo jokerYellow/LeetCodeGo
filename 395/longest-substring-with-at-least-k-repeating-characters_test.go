@@ -44,3 +44,14 @@ func Test4(t *testing.T) {
 		t.Fail()
 	}
 }
+
+
+func Test5(t *testing.T) {
+	s := "bbaaacbd"
+	k := 3
+	output := longestSubstring(s, k)
+	expect := 3
+	if output != expect {
+		t.Fail()
+	}
+}

@@ -39,8 +39,12 @@ func longestSubstring(s string, k int) int {
 	if k == 1 {
 		return len(s)
 	}
+
+	ss := []rune(s)
+
 	counts := map[rune]int{}
-	for _, v := range s {
+
+	for _, v := range ss {
 		counts[v] += 1
 	}
 
@@ -53,24 +57,26 @@ func longestSubstring(s string, k int) int {
 	if isOK == true {
 		return len(s)
 	}
-	
+
 	var t []rune
 	var maxCount int
-	for _, v := range s {
+	for _, v := range ss {
 		if counts[v] < k {
-			count := longestSubstring(string(t), k)
-			if maxCount < count {
-				maxCount = count
+			validLong := longestSubstring(string(t), k)
+			if validLong > maxCount {
+				maxCount = validLong
 			}
 			t = []rune{}
 		} else {
 			t = append(t, v)
 		}
 	}
-	tLength := longestSubstring(string(t), k)
-	if tLength > maxCount {
-		maxCount = tLength
-	}
 
+	if len(t) > 0 {
+		validLong := longestSubstring(string(t), k)
+		if validLong > maxCount {
+			maxCount = validLong
+		}
+	}
 	return maxCount
 }
