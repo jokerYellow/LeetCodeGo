@@ -34,7 +34,7 @@ All inputs are guaranteed to be non-empty strings.
 type Trie struct {
 	content []string
 }
-//todo:refactor it
+//#TODO:refactor it
 /** Initialize your data structure here. */
 func Constructor() Trie {
 	return Trie{}
