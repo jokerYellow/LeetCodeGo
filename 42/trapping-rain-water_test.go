@@ -3,13 +3,12 @@ package leetcode
 import "testing"
 
 func Test1(t *testing.T) {
-	input := []int{0,1,0,2,1,0,1,3,2,1,2,1}
+	input := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
 	expect := 6
 	if trap(input) != expect {
 		t.Fail()
 	}
 }
-
 
 func Test2(t *testing.T) {
 	var input []int
@@ -19,11 +18,9 @@ func Test2(t *testing.T) {
 	}
 }
 
-
-
 func Test3(t *testing.T) {
-	input := []int{0,1,0,1,0,1,0,1,0,1,0}
-	expect := 4
+	input := []int{0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0}
+	expect := 3
 	if trap(input) != expect {
 		t.Fail()
 	}

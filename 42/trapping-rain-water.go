@@ -94,7 +94,7 @@ func trap2(height []int) int {
 	return traps
 }
 
-//#TODO: complete me
+//#TODO: make me clear
 func trap3(height []int) int {
 
 	length := len(height)
@@ -109,15 +109,25 @@ func trap3(height []int) int {
 
 	traps := 0
 	for leftIndex < rightIndex {
-		for maxLeft <= maxRight && leftIndex < rightIndex{
-			maxLeft = max(maxLeft,height[leftIndex])
-			traps += min(maxLeft,maxRight) - height[leftIndex]
+		for maxLeft <= maxRight && leftIndex < rightIndex {
 			leftIndex += 1
+			value := height[leftIndex]
+			maxLeft = max(maxLeft, value)
+			if maxLeft <= maxRight {
+				traps += min(maxLeft, maxRight) - value
+			}else{
+				break
+			}
 		}
-		for maxRight < maxLeft && leftIndex < rightIndex{
-			maxRight = max(maxRight,height[rightIndex])
-			traps += min(maxRight,maxLeft) - height[rightIndex]
-			rightIndex -=1
+		for maxRight <= maxLeft && leftIndex < rightIndex {
+			rightIndex -= 1
+			value := height[rightIndex]
+			maxRight = max(maxRight, value)
+			if maxLeft >= maxRight{
+				traps += min(maxRight, maxLeft) - value
+			}else{
+				break
+			}
 		}
 	}
 
