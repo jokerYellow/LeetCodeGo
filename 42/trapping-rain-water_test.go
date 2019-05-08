@@ -19,8 +19,8 @@ func Test2(t *testing.T) {
 }
 
 func Test3(t *testing.T) {
-	input := []int{0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0}
-	expect := 3
+	input := []int{0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0}
+	expect := 4
 	if trap(input) != expect {
 		t.Fail()
 	}

@@ -94,6 +94,7 @@ func trap2(height []int) int {
 	return traps
 }
 
+//two points
 //time complexity O(n)
 //space complexity O(1)
 func trap3(height []int) int {
@@ -109,21 +110,25 @@ func trap3(height []int) int {
 	maxRight := height[rightIndex]
 
 	traps := 0
-	for leftIndex < rightIndex {
+	for{
 		if maxLeft <= maxRight {
-			leftIndex += 1
+			if leftIndex += 1; leftIndex >= rightIndex {
+				break
+			}
 			value := height[leftIndex]
 			maxLeft = max(maxLeft, value)
-			if maxLeft > 0 && maxRight > 0 {
-				traps += min(maxLeft, maxRight) - value
+			if add := min(maxRight, maxLeft) - value; add > 0 {
+				traps += add
 			}
 		}
 		if maxRight <= maxLeft {
-			rightIndex -= 1
+			if rightIndex -= 1; leftIndex >= rightIndex {
+				break
+			}
 			value := height[rightIndex]
 			maxRight = max(maxRight, value)
-			if maxLeft > 0 && maxRight > 0 {
-				traps += min(maxRight, maxLeft) - value
+			if add := min(maxRight, maxLeft) - value; add > 0 {
+				traps += add
 			}
 		}
 	}
