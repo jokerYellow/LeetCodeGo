@@ -25,3 +25,11 @@ func Test3(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func Test4(t *testing.T) {
+	input := []int{4, 2, 0, 3, 2, 5}
+	expect := 9
+	if trap(input) != expect {
+		t.Fail()
+	}
+}

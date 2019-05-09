@@ -1,5 +1,7 @@
 package leetcode
 
+import "errors"
+
 /*
 https://leetcode.com/problems/trapping-rain-water/
 42. Trapping Rain Water
@@ -27,8 +29,7 @@ Output: 6
 */
 
 func trap(height []int) int {
-
-	return trap3(height)
+	return trap4(height)
 }
 
 func max(a, b int) int {
@@ -110,7 +111,7 @@ func trap3(height []int) int {
 	maxRight := height[rightIndex]
 
 	traps := 0
-	for{
+	for {
 		if maxLeft <= maxRight {
 			if leftIndex += 1; leftIndex >= rightIndex {
 				break
@@ -133,5 +134,61 @@ func trap3(height []int) int {
 		}
 	}
 
+	return traps
+}
+
+type stack struct {
+	array []int
+}
+
+func (s *stack) top() (int, error) {
+	length := len(s.array)
+	if length == 0 {
+		return 0, errors.New("null stack")
+	}
+	return s.array[length-1], nil
+}
+
+func (s *stack) pop() {
+	length := len(s.array)
+	if length == 0 {
+		return
+	}
+	s.array = s.array[:length-1]
+}
+
+func (s *stack) push(t int) {
+	s.array = append(s.array, t)
+}
+
+func (s *stack) isEmpty() bool {
+	return len(s.array) == 0
+}
+
+//use stack;
+//time complexity O(n)
+//space complexity O(n)
+func trap4(height []int) int {
+	s := stack{}
+	traps := 0
+	for i, v := range height {
+		for {
+			if top, ok := s.top(); ok == nil {
+				if height[top] < v {
+					s.pop()
+					if s.isEmpty() == false {
+						preTop, _ := s.top()
+						traps += (min(v, height[preTop]) - height[top]) * (i - preTop - 1)
+					}
+				} else {
+					s.push(i)
+					break
+				}
+			} else {
+				s.push(i)
+				break
+			}
+		}
+	}
 	return traps
 }
