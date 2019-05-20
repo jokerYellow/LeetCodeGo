@@ -1,5 +1,9 @@
 package _18_the_skyline_problem
 
+import (
+	"sort"
+)
+
 /*
 https://leetcode.com/problems/the-skyline-problem/
 218. The Skyline Problem
@@ -36,7 +40,20 @@ type Item struct {
 	height int
 }
 
+// TODO: refactor
 func getSkyline(buildings [][]int) [][]int {
+	var removeRepeated [][]int
+	var lastOne []int
+	for _, v := range buildings {
+		if len(lastOne) > 0 && lastOne[0] == v[0] && lastOne[1] == v[1] && lastOne[2] == v[2] {
+			continue
+		} else {
+			removeRepeated = append(removeRepeated, v)
+			lastOne = v
+		}
+	}
+	buildings = removeRepeated
+
 	var rt [][]int
 	items := make([]*Item, len(buildings)*2)
 	for i, v := range buildings {
@@ -45,12 +62,19 @@ func getSkyline(buildings [][]int) [][]int {
 		right := Item{isLeft: false, index: v[1], height: v[2]}
 		items[2*i+1] = &right
 	}
+
+	sort.Slice(items, func(i, j int) bool {
+		return items[i].index < items[j].index
+	})
+
 	for _, item := range items {
 		if item.isLeft {
 			lowwerThanSomeOne := false
 			for _, v := range buildings {
 				if v[0] <= item.index && v[1] >= item.index {
-					if v[2] > item.height {
+					if v[2] > item.height ||
+						(v[2] == item.height && item.index == v[1]) ||
+						(v[2] >= item.height && item.index > v[0] && item.index < v[1]) {
 						lowwerThanSomeOne = true
 						break
 					}
@@ -63,14 +87,18 @@ func getSkyline(buildings [][]int) [][]int {
 			lowwerHeight := 0
 			for _, v := range buildings {
 				if v[0] <= item.index && v[1] >= item.index {
-					if v[2] > item.height {
+					if v[2] > item.height ||
+						(v[2] == item.height && item.index == v[0]) ||
+						(v[2] >= item.height && item.index > v[0] && item.index < v[1]) {
 						lowwerHeight = -1
 						break
 					} else if v[2] < item.height {
-						if lowwerHeight == 0 {
-							lowwerHeight = v[2]
-						} else if lowwerHeight < v[2] {
-							lowwerHeight = v[2]
+						if v[1] > item.index {
+							if lowwerHeight == 0 {
+								lowwerHeight = v[2]
+							} else if lowwerHeight < v[2] {
+								lowwerHeight = v[2]
+							}
 						}
 					}
 				}
