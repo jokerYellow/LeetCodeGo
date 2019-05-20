@@ -35,3 +35,27 @@ func EqualStrings(l, r []string) bool {
 	}
 	return true
 }
+
+func CheckEqual(a,b [][]int)bool{
+	if len(a) != len(b){
+		return false
+	}
+	for i,v := range a{
+		if checkEqualArr(v,b[i]) == false{
+			return false
+		}
+	}
+	return true
+}
+
+func checkEqualArr(a,b []int)bool{
+	if len(a) != len(b){
+		return false
+	}
+	for i,v := range a{
+		if b[i] != v{
+			return false
+		}
+	}
+	return true
+}
