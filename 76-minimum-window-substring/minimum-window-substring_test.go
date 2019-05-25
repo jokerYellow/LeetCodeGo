@@ -42,3 +42,14 @@ func Test4(t *testing.T) {
 		t.Fail()
 	}
 }
+
+
+func Test5(t *testing.T) {
+	input := "cabwefgewcwaefgcf"
+	tt := "cae"
+	expect := "cwae"
+	output := minWindow(input, tt)
+	if output != expect {
+		t.Fail()
+	}
+}

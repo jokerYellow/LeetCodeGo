@@ -25,7 +25,7 @@ If there is such window, you are guaranteed that there will always be only one u
 */
 
 func minWindow(s string, t string) string {
-	return minWindow2(s, t)
+	return minWindow3(s, t)
 }
 
 //too slow
@@ -104,4 +104,38 @@ func minWindow2(s string, t string) string {
 		right++
 	}
 	return min
+}
+
+func minWindow3(s string, t string) string {
+	var left int
+	min := len(s) + 1
+	out := ""
+	tCount := map[rune]int{}
+	for _, v := range t {
+		tCount[v] ++
+	}
+	count := 0
+	for i, v := range s {
+		if _, ok := tCount[v]; ok {
+			tCount[v]--
+			if tCount[v] >= 0 {
+				count++
+			}
+		}
+		for count == len(t) {
+			if min > i-left {
+				min = i - left
+				out = s[left : left+min+1]
+			}
+			r := rune(s[left])
+			if _, ok := tCount[r]; ok {
+				tCount[r]++
+				if tCount[r] > 0 {
+					count--
+				}
+			}
+			left++
+		}
+	}
+	return out
 }
