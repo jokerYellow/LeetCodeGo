@@ -29,7 +29,7 @@ Output: 6
 */
 
 func trap(height []int) int {
-	return trap4(height)
+	return trap3(height)
 }
 
 func max(a, b int) int {
@@ -111,27 +111,18 @@ func trap3(height []int) int {
 	maxRight := height[rightIndex]
 
 	traps := 0
-	for {
-		if maxLeft <= maxRight {
-			if leftIndex += 1; leftIndex >= rightIndex {
-				break
-			}
-			value := height[leftIndex]
+	for leftIndex <= rightIndex {
+		value := 0
+		if maxLeft < maxRight {
+			value = height[leftIndex]
 			maxLeft = max(maxLeft, value)
-			if add := min(maxRight, maxLeft) - value; add > 0 {
-				traps += add
-			}
-		}
-		if maxRight <= maxLeft {
-			if rightIndex -= 1; leftIndex >= rightIndex {
-				break
-			}
-			value := height[rightIndex]
+			leftIndex++
+		} else {
+			value = height[rightIndex]
 			maxRight = max(maxRight, value)
-			if add := min(maxRight, maxLeft) - value; add > 0 {
-				traps += add
-			}
+			rightIndex--
 		}
+		traps += max(min(maxRight, maxLeft)-value, 0)
 	}
 
 	return traps
