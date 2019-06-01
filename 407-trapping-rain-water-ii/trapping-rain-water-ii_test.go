@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+func TestHeap(t *testing.T) {
+	h := &heap{}
+	h.items = []int{1, 2, 3, 4, 3, 2, 1, 2, 2}
+	fmt.Println(h)
+	h.maxHeapify(1)
+	fmt.Println(h)
+}
+
 func Test1(t *testing.T) {
 	input := [][]int{
 		{1, 4, 3, 1, 3, 2},
