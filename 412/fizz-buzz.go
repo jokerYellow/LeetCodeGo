@@ -43,12 +43,11 @@ Return:
     "14",
     "FizzBuzz"
 ]
- */
+*/
 
 func fizzBuzz(n int) []string {
 	rt := make([]string, n)
-	var i = 1
-	for i <= n {
+	for i := 1; i <= n; i++ {
 		var t string
 		if i%15 == 0 {
 			t = "FizzBuzz"
@@ -56,11 +55,10 @@ func fizzBuzz(n int) []string {
 			t = "Buzz"
 		} else if i%3 == 0 {
 			t = "Fizz"
-		}else{
+		} else {
 			t = strconv.Itoa(i)
 		}
 		rt[i-1] = t
-		i++
 	}
 	return rt
 }
