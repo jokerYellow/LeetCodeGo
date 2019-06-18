@@ -21,6 +21,22 @@ func Test1(t *testing.T) {
 	}
 }
 
+func Test2(t *testing.T) {
+	root := &TreeNode{Val: 3}
+
+	t2 := &TreeNode{Val: 1}
+	t3 := &TreeNode{Val: 2}
+	root.Left = t2
+	t2.Right = t3
+
+	expect := inorderTraversal1(root)
+	output := inorderTraversal(root)
+	fmt.Println(expect, output)
+	if !equal(expect, output) {
+		t.Fail()
+	}
+}
+
 func equal(l, r []int) bool {
 	if len(l) != len(r) {
 		return false
