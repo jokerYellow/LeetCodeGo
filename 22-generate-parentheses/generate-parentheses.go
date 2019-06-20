@@ -26,7 +26,7 @@ For example, given n = 3, a solution set is:
   "()()()"
 ]
 */
-
+//TODO:should be understand the solution.
 func generateParenthesis(n int) []string {
 	var list []string
 	backtrack(&list, "", 0, 0, n)
