@@ -1,7 +1,5 @@
 package _2_generate_parentheses
 
-import "fmt"
-
 /*
 https://leetcode.com/problems/generate-parentheses/
 22. Generate Parentheses
@@ -26,23 +24,22 @@ For example, given n = 3, a solution set is:
   "()()()"
 ]
 */
-//TODO:should be understand the solution.
+
 func generateParenthesis(n int) []string {
 	var list []string
-	backtrack(&list, "", 0, 0, n)
+	appendParenthesis(&list, "", 0, 0, n)
 	return list
 }
 
-func backtrack(list *[]string, str string, open, close, max int) {
-	fmt.Println(list, str, open, close, max)
-	if len(str) == max*2 {
-		*list = append(*list, str)
+func appendParenthesis(list *[]string, text string, open, close, max int) {
+	if len(text) == 2*max {
+		*list = append(*list, text)
 		return
 	}
 	if open < max {
-		backtrack(list, str+"(", open+1, close, max)
+		appendParenthesis(list, text+"(", open+1, close, max)
 	}
 	if close < open {
-		backtrack(list, str+")", open, close+1, max)
+		appendParenthesis(list, text+")", open, close+1, max)
 	}
 }
