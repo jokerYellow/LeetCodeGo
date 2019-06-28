@@ -1,7 +1,7 @@
 package utils
 
 type ListNode struct {
-	Var  int
+	Val  int
 	Next *ListNode
 }
 
@@ -10,7 +10,7 @@ func GenerateLinkList(arr []int) *ListNode {
 	var head *ListNode
 	for v := range arr {
 		l := new(ListNode)
-		l.Var = arr[v]
+		l.Val = arr[v]
 		if link == nil {
 			link = l
 			head = link
@@ -21,6 +21,28 @@ func GenerateLinkList(arr []int) *ListNode {
 	}
 	return head
 }
+
+func CheckEqualLink(l1, l2 *ListNode) bool {
+	h1 := l1
+	h2 := l2
+	if l1 == nil && l2 != nil {
+		return false
+	} else if l1 != nil && l2 == nil {
+		return false
+	}
+	for h1 != nil && h2 != nil {
+		if h1.Val != h2.Val {
+			return false
+		}
+		h1 = h1.Next
+		h2 = h2.Next
+	}
+	if h1 == nil && h2 == nil {
+		return true
+	}
+	return false
+}
+
 
 func EqualStrings(l, r []string) bool {
 	if len(l) != len(r) {
