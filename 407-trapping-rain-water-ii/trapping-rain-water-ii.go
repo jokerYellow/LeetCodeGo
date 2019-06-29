@@ -82,18 +82,18 @@ func (this *heap) index(index int) (int, error) {
 }
 
 func (this *heap) exchange(index1, index2 int) {
-	index1 -=1
-	index2 -=1
+	index1 -= 1
+	index2 -= 1
 	this.items[index1], this.items[index2] = this.items[index2], this.items[index1]
 }
 
 func (this *heap) maxHeapify(i int) {
 	l := left(i)
 	r := right(i)
-	if l < len(this.items){
+	if l < len(this.items) {
 		this.maxHeapify(l)
 	}
-	if r < len(this.items){
+	if r < len(this.items) {
 		this.maxHeapify(r)
 	}
 	currentValue, err := this.index(i)
@@ -143,6 +143,7 @@ type cell struct {
 	height int
 }
 
+//TODO:complete it
 func trapRainWater(heightMap [][]int) int {
 	if len(heightMap) == 0 {
 		return 0
