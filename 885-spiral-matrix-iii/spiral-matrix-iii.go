@@ -1,7 +1,5 @@
 package _85_spiral_matrix_iii
 
-import "fmt"
-
 /*
 https://leetcode.com/problems/spiral-matrix-iii/
 
@@ -57,18 +55,7 @@ Submissions
 14,346
 */
 
-func abs(v int) int {
-	if v < 0 {
-		return -v
-	}
-	return v
-}
-
 func spiralMatrixIII(R int, C int, r0 int, c0 int) [][]int {
-	corner := abs(R - r0)
-	if corner < abs(C-c0) {
-		corner = abs(C - c0)
-	}
 	matrix := make([][]int, R*C)
 	for i := range matrix {
 		matrix[i] = make([]int, 2)
@@ -77,64 +64,51 @@ func spiralMatrixIII(R int, C int, r0 int, c0 int) [][]int {
 	c := c0
 	round := 1
 	index := 0
-	if r < R && c < C && r >= 0 && c >= 0 {
-		matrix[index] = []int{r, c}
-		index++
-		if index == R*C {
-			return matrix
-		}
+
+	if !tryAppend(r, c, R, C, &index, &matrix) {
+		return matrix
 	}
 
 	for index < R*C {
-		//1,1,2,2,3,3,4,4,5,5,6,6
 		for i := 1; i <= round; i++ {
 			c = c + 1
-			fmt.Printf("r:%d,c:%d\n", r, c)
-			if r < R && c < C && r >= 0 && c >= 0 {
-				matrix[index] = []int{r, c}
-				index++
-				if index == R*C {
-					return matrix
-				}
+			if !tryAppend(r, c, R, C, &index, &matrix) {
+				return matrix
 			}
 		}
 
 		for i := 1; i <= round; i++ {
 			r = r + 1
-			fmt.Printf("r:%d,c:%d\n", r, c)
-			if r < R && c < C && r >= 0 && c >= 0 {
-				matrix[index] = []int{r, c}
-				index++
-				if index == R*C {
-					return matrix
-				}
+			if !tryAppend(r, c, R, C, &index, &matrix) {
+				return matrix
 			}
 		}
 
 		for i := 1; i <= round+1; i++ {
 			c = c - 1
-			fmt.Printf("r:%d,c:%d\n", r, c)
-			if r < R && c < C && r >= 0 && c >= 0 {
-				matrix[index] = []int{r, c}
-				index++
-				if index == R*C {
-					return matrix
-				}
+			if !tryAppend(r, c, R, C, &index, &matrix) {
+				return matrix
 			}
 		}
 
 		for i := 1; i <= round+1; i++ {
 			r = r - 1
-			fmt.Printf("r:%d,c:%d\n", r, c)
-			if r < R && c < C && r >= 0 && c >= 0 {
-				matrix[index] = []int{r, c}
-				index++
-				if index == R*C {
-					return matrix
-				}
+			if !tryAppend(r, c, R, C, &index, &matrix) {
+				return matrix
 			}
 		}
 		round += 2
 	}
 	return matrix
+}
+
+func tryAppend(r, c, R, C int, index *int, matrix *[][]int) bool {
+	if r < R && c < C && r >= 0 && c >= 0 {
+		(*matrix)[*index] = []int{r, c}
+		*index++
+		if *index == R*C {
+			return false
+		}
+	}
+	return true
 }
