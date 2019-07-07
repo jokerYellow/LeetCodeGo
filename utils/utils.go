@@ -1,5 +1,7 @@
 package utils
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -43,7 +45,6 @@ func CheckEqualLink(l1, l2 *ListNode) bool {
 	return false
 }
 
-
 func EqualStrings(l, r []string) bool {
 	if len(l) != len(r) {
 		return false
@@ -80,4 +81,8 @@ func CheckEqualArr(a, b []int) bool {
 		}
 	}
 	return true
+}
+
+func Print(expect, output interface{}) {
+	fmt.Printf("expect:%s\noutput:%s\n", expect, output)
 }
