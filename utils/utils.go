@@ -86,3 +86,12 @@ func CheckEqualArr(a, b []int) bool {
 func Print(expect, output interface{}) {
 	fmt.Printf("expect:%s\noutput:%s\n", expect, output)
 }
+
+func Contain(arr []string, s string) bool {
+	for _, v := range arr {
+		if v == s {
+			return true
+		}
+	}
+	return false
+}

@@ -1,8 +1,9 @@
 package __add_two_numbers
 
 import (
-	"github.com/jokerYellow/leetcode/utils"
 	"testing"
+
+	"github.com/jokerYellow/leetcode/utils"
 )
 
 func Test1(t *testing.T) {
