@@ -1,7 +1,7 @@
 # LeetCode
  >count:52 
 
-|#|title|
+|#|Title|
 | --- | --- |
 |2|[add-two-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/2-add-two-numbers)|
 |3|[longest-substring-without-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/3-longest-substring-without-repeating-characters)|
