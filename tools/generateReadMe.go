@@ -15,7 +15,7 @@ import (
 func main() {
 	leetcode, count := leetcodeItems()
 
-	readMe := fmt.Sprintf("# LeetCode\n >count:%d \n\n|题号|题目|\n| --- | --- |\n", count)
+	readMe := fmt.Sprintf("# LeetCode\n >count:%d \n\n|#|title|\n| --- | --- |\n", count)
 
 	readMe += leetcode
 	f, _ := os.Create("ReadMe.md")
