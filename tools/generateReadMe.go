@@ -7,12 +7,16 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"sort"
+	"strconv"
 	"strings"
 )
 
 func main() {
-	readMe := "# LeetCode\n |||\n| --- | --- |\n"
-	leetcode := leetcodeItems()
+	leetcode, count := leetcodeItems()
+
+	readMe := fmt.Sprintf("# LeetCode\n >count:%d \n\n|题号|题目|\n| --- | --- |\n", count)
+
 	readMe += leetcode
 	f, _ := os.Create("ReadMe.md")
 	defer func() {
@@ -27,23 +31,29 @@ func main() {
 	}
 }
 
-func leetcodeItems() string {
+func leetcodeItems() (string, int) {
 	dir := "./"
 	files, error := ioutil.ReadDir(dir)
 	if error != nil {
 		log.Fatal(error)
 	}
 	b := new(bytes.Buffer)
-
-	index := 1
+	sort.Slice(files, func(left, right int) bool {
+		leftNumber := getLeetcodeNumber(files[left].Name())
+		rightNumber := getLeetcodeNumber(files[right].Name())
+		l, _ := strconv.Atoi(leftNumber)
+		r, _ := strconv.Atoi(rightNumber)
+		return l < r
+	})
+	count := 0
 	for _, f := range files {
 		item := modified(f, dir)
 		if item != nil {
-			b.WriteString(fmt.Sprintf("| %d | %s |\n", index, *item))
-			index++
+			count++
+			b.WriteString(fmt.Sprintf("%s\n", *item))
 		}
 	}
-	return b.String()
+	return b.String(), count
 }
 
 //change direcrory name componented by number and description
@@ -63,7 +73,7 @@ func modified(f os.FileInfo, dir string) *string {
 	questionName := strings.Replace(files[0].Name(), ".go", "", 1)
 	finalName := number + "-" + questionName
 	os.Rename(dir+"/"+name, dir+"/"+finalName)
-	show := "[" + finalName + "]" + "(" + "https://github.com/jokerYellow/LeetCodeGo/tree/master/" + finalName + ")"
+	show := fmt.Sprintf("|%s|[%s](https://github.com/jokerYellow/LeetCodeGo/tree/master/%s)|", number, questionName, finalName)
 	return &show
 }
 
