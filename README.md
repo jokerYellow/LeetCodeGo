@@ -1,53 +1,55 @@
 # LeetCode
-1. [1003-check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-check-if-word-is-valid-after-substitutions)
-2. [1105-filling-bookcase-shelves](https://github.com/jokerYellow/LeetCodeGo/tree/master/1105-filling-bookcase-shelves)
-3. [12-integer-to-roman](https://github.com/jokerYellow/LeetCodeGo/tree/master/12-integer-to-roman)
-4. [121-best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)
-5. [13-roman-to-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/13-roman-to-integer)
-6. [141-linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle)
-7. [142-linked-list-cycle-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/142-linked-list-cycle-ii)
-8. [160-intersection-of-two-linked-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/160-intersection-of-two-linked-lists)
-9. [174-174-dungeon-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/174-174-dungeon-game)
-10. [2-add-two-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/2-add-two-numbers)
-11. [20-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/20-valid-parentheses)
-12. [203-remove-linked-list-elements](https://github.com/jokerYellow/LeetCodeGo/tree/master/203-remove-linked-list-elements)
-13. [206-reverse-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/206-reverse-linked-list)
-14. [208-implement-trie-prefix-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/208-implement-trie-prefix-tree)
-15. [21-merge-two-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/21-merge-two-sorted-lists)
-16. [218-the-skyline-problem](https://github.com/jokerYellow/LeetCodeGo/tree/master/218-the-skyline-problem)
-17. [22-generate-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/22-generate-parentheses)
-18. [23-merge-k-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/23-merge-k-sorted-lists)
-19. [234-palindrome-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/234-palindrome-linked-list)
-20. [237-delete-node-in-a-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/237-delete-node-in-a-linked-list)
-21. [26-remove-duplicates-from-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/26-remove-duplicates-from-sorted-array)
-22. [3-longest-substring-without-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/3-longest-substring-without-repeating-characters)
-23. [32-longest-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/32-longest-valid-parentheses)
-24. [372-super-pow](https://github.com/jokerYellow/LeetCodeGo/tree/master/372-super-pow)
-25. [38-count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say)
-26. [384-shuffle-an-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/384-shuffle-an-array)
-27. [387-first-unique-character-in-a-string](https://github.com/jokerYellow/LeetCodeGo/tree/master/387-first-unique-character-in-a-string)
-28. [395-longest-substring-with-at-least-k-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/395-longest-substring-with-at-least-k-repeating-characters)
-29. [402-remove-k-digits](https://github.com/jokerYellow/LeetCodeGo/tree/master/402-remove-k-digits)
-30. [407-trapping-rain-water-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/407-trapping-rain-water-ii)
-31. [412-fizz-buzz](https://github.com/jokerYellow/LeetCodeGo/tree/master/412-fizz-buzz)
-32. [42-trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)
-33. [454-4sum-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/454-4sum-ii)
-34. [5-longest-palindromic-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/5-longest-palindromic-substring)
-35. [530-minimum-absolute-difference-in-bst](https://github.com/jokerYellow/LeetCodeGo/tree/master/530-minimum-absolute-difference-in-bst)
-36. [54-spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)
-37. [57-insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval)
-38. [59-59-spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-59-spiral-matrix-ii)
-39. [633-sum-of-square-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/633-sum-of-square-numbers)
-40. [67-add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)
-41. [680-valid-palindrome-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/680-valid-palindrome-ii)
-42. [7-reverse-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/7-reverse-integer)
-43. [76-minimum-window-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/76-minimum-window-substring)
-44. [82-remove-duplicates-from-sorted-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/82-remove-duplicates-from-sorted-list-ii)
-45. [826-826-most-profit-assigning-work](https://github.com/jokerYellow/LeetCodeGo/tree/master/826-826-most-profit-assigning-work)
-46. [83-remove-duplicates-from-sorted-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/83-remove-duplicates-from-sorted-list)
-47. [84-largest-rectangle-in-histogram](https://github.com/jokerYellow/LeetCodeGo/tree/master/84-largest-rectangle-in-histogram)
-48. [876-middle-of-the-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/876-middle-of-the-linked-list)
-49. [885-spiral-matrix-iii](https://github.com/jokerYellow/LeetCodeGo/tree/master/885-spiral-matrix-iii)
-50. [916-word-subsets](https://github.com/jokerYellow/LeetCodeGo/tree/master/916-word-subsets)
-51. [92-reverse-linked-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/92-reverse-linked-list-ii)
-52. [94-binary-tree-inorder-traversal](https://github.com/jokerYellow/LeetCodeGo/tree/master/94-binary-tree-inorder-traversal)
+ |||
+| --- | --- |
+| 1 | [1003-check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-check-if-word-is-valid-after-substitutions) |
+| 2 | [1105-filling-bookcase-shelves](https://github.com/jokerYellow/LeetCodeGo/tree/master/1105-filling-bookcase-shelves) |
+| 3 | [12-integer-to-roman](https://github.com/jokerYellow/LeetCodeGo/tree/master/12-integer-to-roman) |
+| 4 | [121-best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock) |
+| 5 | [13-roman-to-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/13-roman-to-integer) |
+| 6 | [141-linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle) |
+| 7 | [142-linked-list-cycle-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/142-linked-list-cycle-ii) |
+| 8 | [160-intersection-of-two-linked-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/160-intersection-of-two-linked-lists) |
+| 9 | [174-174-dungeon-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/174-174-dungeon-game) |
+| 10 | [2-add-two-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/2-add-two-numbers) |
+| 11 | [20-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/20-valid-parentheses) |
+| 12 | [203-remove-linked-list-elements](https://github.com/jokerYellow/LeetCodeGo/tree/master/203-remove-linked-list-elements) |
+| 13 | [206-reverse-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/206-reverse-linked-list) |
+| 14 | [208-implement-trie-prefix-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/208-implement-trie-prefix-tree) |
+| 15 | [21-merge-two-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/21-merge-two-sorted-lists) |
+| 16 | [218-the-skyline-problem](https://github.com/jokerYellow/LeetCodeGo/tree/master/218-the-skyline-problem) |
+| 17 | [22-generate-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/22-generate-parentheses) |
+| 18 | [23-merge-k-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/23-merge-k-sorted-lists) |
+| 19 | [234-palindrome-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/234-palindrome-linked-list) |
+| 20 | [237-delete-node-in-a-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/237-delete-node-in-a-linked-list) |
+| 21 | [26-remove-duplicates-from-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/26-remove-duplicates-from-sorted-array) |
+| 22 | [3-longest-substring-without-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/3-longest-substring-without-repeating-characters) |
+| 23 | [32-longest-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/32-longest-valid-parentheses) |
+| 24 | [372-super-pow](https://github.com/jokerYellow/LeetCodeGo/tree/master/372-super-pow) |
+| 25 | [38-count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say) |
+| 26 | [384-shuffle-an-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/384-shuffle-an-array) |
+| 27 | [387-first-unique-character-in-a-string](https://github.com/jokerYellow/LeetCodeGo/tree/master/387-first-unique-character-in-a-string) |
+| 28 | [395-longest-substring-with-at-least-k-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/395-longest-substring-with-at-least-k-repeating-characters) |
+| 29 | [402-remove-k-digits](https://github.com/jokerYellow/LeetCodeGo/tree/master/402-remove-k-digits) |
+| 30 | [407-trapping-rain-water-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/407-trapping-rain-water-ii) |
+| 31 | [412-fizz-buzz](https://github.com/jokerYellow/LeetCodeGo/tree/master/412-fizz-buzz) |
+| 32 | [42-trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water) |
+| 33 | [454-4sum-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/454-4sum-ii) |
+| 34 | [5-longest-palindromic-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/5-longest-palindromic-substring) |
+| 35 | [530-minimum-absolute-difference-in-bst](https://github.com/jokerYellow/LeetCodeGo/tree/master/530-minimum-absolute-difference-in-bst) |
+| 36 | [54-spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix) |
+| 37 | [57-insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval) |
+| 38 | [59-59-spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-59-spiral-matrix-ii) |
+| 39 | [633-sum-of-square-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/633-sum-of-square-numbers) |
+| 40 | [67-add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary) |
+| 41 | [680-valid-palindrome-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/680-valid-palindrome-ii) |
+| 42 | [7-reverse-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/7-reverse-integer) |
+| 43 | [76-minimum-window-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/76-minimum-window-substring) |
+| 44 | [82-remove-duplicates-from-sorted-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/82-remove-duplicates-from-sorted-list-ii) |
+| 45 | [826-826-most-profit-assigning-work](https://github.com/jokerYellow/LeetCodeGo/tree/master/826-826-most-profit-assigning-work) |
+| 46 | [83-remove-duplicates-from-sorted-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/83-remove-duplicates-from-sorted-list) |
+| 47 | [84-largest-rectangle-in-histogram](https://github.com/jokerYellow/LeetCodeGo/tree/master/84-largest-rectangle-in-histogram) |
+| 48 | [876-middle-of-the-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/876-middle-of-the-linked-list) |
+| 49 | [885-spiral-matrix-iii](https://github.com/jokerYellow/LeetCodeGo/tree/master/885-spiral-matrix-iii) |
+| 50 | [916-word-subsets](https://github.com/jokerYellow/LeetCodeGo/tree/master/916-word-subsets) |
+| 51 | [92-reverse-linked-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/92-reverse-linked-list-ii) |
+| 52 | [94-binary-tree-inorder-traversal](https://github.com/jokerYellow/LeetCodeGo/tree/master/94-binary-tree-inorder-traversal) |

@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	readMe := "# LeetCode\n"
+	readMe := "# LeetCode\n |||\n| --- | --- |\n"
 	leetcode := leetcodeItems()
 	readMe += leetcode
 	f, _ := os.Create("ReadMe.md")
@@ -39,8 +39,7 @@ func leetcodeItems() string {
 	for _, f := range files {
 		item := modified(f, dir)
 		if item != nil {
-			b.WriteString(fmt.Sprintf("%d. %s", index, *item))
-			b.WriteString("\n")
+			b.WriteString(fmt.Sprintf("| %d | %s |\n", index, *item))
 			index++
 		}
 	}
