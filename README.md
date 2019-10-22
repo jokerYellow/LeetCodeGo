@@ -1,5 +1,5 @@
 # LeetCode
-1. [1003-1003-check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-1003-check-if-word-is-valid-after-substitutions)
+1. [1003-check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-check-if-word-is-valid-after-substitutions)
 2. [1105-filling-bookcase-shelves](https://github.com/jokerYellow/LeetCodeGo/tree/master/1105-filling-bookcase-shelves)
 3. [12-integer-to-roman](https://github.com/jokerYellow/LeetCodeGo/tree/master/12-integer-to-roman)
 4. [121-best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)
