@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -10,38 +11,64 @@ import (
 )
 
 func main() {
+	readMe := "# LeetCode\n"
+	leetcode := leetcodeItems()
+	readMe += leetcode
+	f, _ := os.Create("ReadMe.md")
+	defer func() {
+		f.Close()
+	}()
+	if f == nil {
+		log.Fatal()
+	}
+	_, err := f.WriteString(readMe)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func leetcodeItems() string {
 	dir := "./"
 	files, error := ioutil.ReadDir(dir)
 	if error != nil {
 		log.Fatal(error)
 	}
+	b := new(bytes.Buffer)
+
+	index := 1
 	for _, f := range files {
-		modified(f, dir)
+		item := modified(f, dir)
+		if item != nil {
+			b.WriteString(fmt.Sprintf("%d. %s", index, *item))
+			b.WriteString("\n")
+			index++
+		}
 	}
+	return b.String()
 }
 
 //change direcrory name componented by number and description
-func modified(f os.FileInfo, dir string) {
+func modified(f os.FileInfo, dir string) *string {
 	name := f.Name()
-	number := isLeetcodeQuestion(name)
+	number := getLeetcodeNumber(name)
 	if len(number) == 0 {
-		return
+		return nil
 	}
-
 	files, error := ioutil.ReadDir(dir + "/" + name)
 	if error != nil {
 		log.Fatal(error)
 	}
 	if len(files) == 0 {
-		return
+		return nil
 	}
 	questionName := strings.Replace(files[0].Name(), ".go", "", 1)
 	finalName := number + "-" + questionName
-	fmt.Println(finalName)
 	os.Rename(dir+"/"+name, dir+"/"+finalName)
+	show := "[" + finalName + "]" + "(" + "https://github.com/jokerYellow/LeetCodeGo/tree/master/" + finalName + ")"
+	return &show
 }
 
-func isLeetcodeQuestion(name string) string {
+func getLeetcodeNumber(name string) string {
 	reg, err := regexp.Compile("^[0-9]+")
 	if err != nil {
 		log.Fatal(err)
