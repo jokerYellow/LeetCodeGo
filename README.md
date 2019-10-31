@@ -1,5 +1,5 @@
 # LeetCode
- >count:52 
+ >count:53 
 
 |#|Title|
 | --- | --- |
@@ -30,6 +30,7 @@
 |121|[best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)|
 |141|[linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle)|
 |142|[linked-list-cycle-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/142-linked-list-cycle-ii)|
+|146|[lru-cache](https://github.com/jokerYellow/LeetCodeGo/tree/master/146-lru-cache)|
 |160|[intersection-of-two-linked-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/160-intersection-of-two-linked-lists)|
 |174|[dungeon-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/174-dungeon-game)|
 |203|[remove-linked-list-elements](https://github.com/jokerYellow/LeetCodeGo/tree/master/203-remove-linked-list-elements)|
