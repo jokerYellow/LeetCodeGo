@@ -1,5 +1,5 @@
 # LeetCode
- >count:55 
+ >count:56 
 
 |#|Title|
 | --- | --- |
@@ -7,6 +7,7 @@
 |3|[longest-substring-without-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/3-longest-substring-without-repeating-characters)|
 |5|[longest-palindromic-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/5-longest-palindromic-substring)|
 |7|[reverse-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/7-reverse-integer)|
+|8|[string-to-integer-atoi](https://github.com/jokerYellow/LeetCodeGo/tree/master/8-string-to-integer-atoi)|
 |11|[container-with-most-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/11-container-with-most-water)|
 |12|[integer-to-roman](https://github.com/jokerYellow/LeetCodeGo/tree/master/12-integer-to-roman)|
 |13|[roman-to-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/13-roman-to-integer)|
