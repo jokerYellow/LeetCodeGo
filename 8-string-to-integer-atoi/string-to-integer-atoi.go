@@ -1,31 +1,26 @@
 package leetcode
 
-import "bytes"
-
 func myAtoi(str string) int {
-	var buffer bytes.Buffer
-
-	for _, item := range str {
-		if item == ' ' && buffer.Len() == 0 {
-			continue
-		}
-		buffer.WriteRune(item)
-	}
-	if str == "+" || str == "-" {
-		return 0
-	}
-	coreStr := buffer.String()
-	max := 1<<31 - 1
-	min := -1 << 31
+	max := (1 << 31) - 1
+	min := -(1 << 31)
 	num := 0
-	minus := 1
-	for index, item := range coreStr {
-		if index == 0 {
+	sign := 1
+	space := 0
+	for index, item := range str {
+		if item == ' ' {
+			if index == space {
+				space++
+				continue
+			} else {
+				break
+			}
+		}
+		if index == space {
 			if item == '-' {
-				minus = -1
+				sign = -1
 				continue
 			} else if item == '+' {
-				minus = 1
+				sign = 1
 				continue
 			}
 		}
@@ -34,13 +29,13 @@ func myAtoi(str string) int {
 		}
 		v := intValue(item)
 		num = 10*num + v
-		if minus == -1 && -1*num <= min {
+		if sign == -1 && -1*num <= min {
 			return min
-		} else if minus == 1 && num >= max {
+		} else if sign == 1 && num >= max {
 			return max
 		}
 	}
-	return num * minus
+	return num * sign
 }
 
 func isValid(c rune) bool {
