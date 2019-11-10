@@ -6,6 +6,9 @@ import (
 )
 
 func printMaxN(n int) string {
+	if n <= 0 {
+		return ""
+	}
 	count := make([]int, n)
 	buffer := bytes.Buffer{}
 	for increase(count) {
