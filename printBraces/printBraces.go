@@ -9,7 +9,8 @@ func printBraces(count int) []string {
 		return []string{"{", "}"}
 	}
 	var result []string
-	for _, item := range printBracesI(count) {
+	items := printBracesI(count)
+	for _, item := range items {
 		if isValid(item) {
 			result = append(result, item)
 		}
@@ -25,10 +26,25 @@ func printBracesI(count int) []string {
 	}
 	var items []string
 	for _, item := range printBracesI(count - 1) {
-		items = append(items, fmt.Sprintf("%s}", item))
-		items = append(items, fmt.Sprintf("%s{", item))
+		if isValidI(item) {
+			items = append(items, fmt.Sprintf("%s}", item))
+			items = append(items, fmt.Sprintf("%s{", item))
+		}
 	}
 	return items
+}
+
+func isValidI(str string) bool {
+	left := 0
+	right := 0
+	for _, b := range str {
+		if b == '{' {
+			left++
+		} else {
+			right++
+		}
+	}
+	return left >= right
 }
 
 func isValid(str string) bool {
