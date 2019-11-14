@@ -62,3 +62,25 @@ func isValid(str string) bool {
 	}
 	return len(arr) == 0
 }
+
+func printParentesis(n int) {
+	if n > 0 {
+		result := make([]byte, n)
+		_printParenthesis(result, 0, n/2, 0, 0)
+	}
+}
+
+func _printParenthesis(strs []byte, pos, n, open, close int) {
+	if close == n {
+		fmt.Println(string(strs))
+	} else {
+		if open > close {
+			strs[pos] = '}'
+			_printParenthesis(strs, pos+1, n, open, close+1)
+		}
+		if open < n {
+			strs[pos] = '{'
+			_printParenthesis(strs, pos+1, n, open+1, close)
+		}
+	}
+}
