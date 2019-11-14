@@ -81,3 +81,15 @@ func Test3(t *testing.T) {
 		t.Fail()
 	}
 }
+
+
+func Test4(t *testing.T) {
+	l1 := new(ListNode)
+	l1.Val = 1
+	l2 := new(ListNode)
+	l2.Val = 2
+	output := getIntersectionNode(l1, l2)
+	if output != nil {
+		t.Fail()
+	}
+}

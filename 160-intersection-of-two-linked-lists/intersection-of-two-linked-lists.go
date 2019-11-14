@@ -69,17 +69,6 @@ type ListNode struct {
 }
 
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
-	return getIntersectionNode2(headA, headB)
-}
-
-/*
- 2,6,3,4,5
- 1,2,4,5
-
- 2,6,3,4,1,2,4,5
- 1,2,4,2,6,3,4,5
-*/
-func getIntersectionNode2(headA, headB *ListNode) *ListNode {
 	ha := headA
 	hb := headB
 	for ha != hb {
@@ -96,69 +85,4 @@ func getIntersectionNode2(headA, headB *ListNode) *ListNode {
 		}
 	}
 	return ha
-}
-
-func getIntersectionNode1(headA, headB *ListNode) *ListNode {
-	lengthA := length(headA)
-	lengthB := length(headB)
-
-	var nodeA *ListNode
-	var nodeB *ListNode
-	if lengthA > lengthB {
-		nodeA = move(headA, lengthA-lengthB)
-		nodeB = headB
-	} else {
-		nodeB = move(headB, -lengthA+lengthB)
-		nodeA = headA
-	}
-
-	for {
-		if nodeA == nodeB {
-			break
-		} else {
-			nodeA = move(nodeA, 1)
-			nodeB = move(nodeB, 1)
-			if nodeA == nil {
-				break
-			}
-		}
-	}
-	return nodeA
-}
-
-func move(node *ListNode, step int) *ListNode {
-	if step == 0 {
-		return node
-	}
-	if node == nil {
-		return nil
-	}
-	var rt = node
-	for {
-		if rt.Next == nil {
-			return nil
-		}
-		rt = rt.Next
-		step--
-		if step == 0 {
-			break
-		}
-	}
-	return rt
-}
-
-func length(head *ListNode) int {
-	if head == nil {
-		return 0
-	}
-	length := 1
-	for {
-		if head.Next != nil {
-			length++
-			head = head.Next
-		} else {
-			break
-		}
-	}
-	return length
 }
