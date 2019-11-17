@@ -1,4 +1,4 @@
-package midSearch
+package binarySearch
 
 import (
 	"fmt"
@@ -16,7 +16,7 @@ func Test(t *testing.T) {
 }
 
 func test(t *testing.T, nums []int, value int, expectIndex int) {
-	output := midSearch(nums, value)
+	output := binarySearch(nums, value)
 	if expectIndex != output {
 		fmt.Println(nums, value)
 		utils.Print(expectIndex, output)
