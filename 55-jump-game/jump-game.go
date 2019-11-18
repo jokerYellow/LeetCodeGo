@@ -39,12 +39,9 @@ func canJump(nums []int) bool {
 	minCount := 0
 	for i := len(nums) - 1; i >= 0; i-- {
 		t := nums[i]
-		if t == 0 {
-			minCount++
-			if i < len(nums)-1 && minCount == 1 {
-				minCount++
-			}
-		} else if t < minCount {
+		if t == 0 && i < len(nums)-1 {
+			minCount = 2
+		} else if t == 0 || t < minCount {
 			minCount++
 		} else {
 			minCount = 0
