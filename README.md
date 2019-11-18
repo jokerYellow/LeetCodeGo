@@ -1,5 +1,5 @@
 # LeetCode
- >count:59 
+ >count:60 
 
 |#|Title|
 | --- | --- |
@@ -22,6 +22,7 @@
 |38|[count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say)|
 |42|[trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)|
 |54|[spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)|
+|55|[jump-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/55-jump-game)|
 |57|[insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval)|
 |59|[spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-spiral-matrix-ii)|
 |67|[add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)|
