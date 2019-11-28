@@ -1,5 +1,5 @@
 # LeetCode
- >count:63 
+ >count:64 
 
 |#|Title|
 | --- | --- |
@@ -66,3 +66,4 @@
 |916|[word-subsets](https://github.com/jokerYellow/LeetCodeGo/tree/master/916-word-subsets)|
 |1003|[check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-check-if-word-is-valid-after-substitutions)|
 |1105|[filling-bookcase-shelves](https://github.com/jokerYellow/LeetCodeGo/tree/master/1105-filling-bookcase-shelves)|
+|1227|[airplane-seat-assignment-probability](https://github.com/jokerYellow/LeetCodeGo/tree/master/1227-airplane-seat-assignment-probability)|
