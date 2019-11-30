@@ -1,8 +1,9 @@
 # LeetCode
- >count:65 
+ >count:66 
 
 |#|Title|
 | --- | --- |
+|1|[two-sum](https://github.com/jokerYellow/LeetCodeGo/tree/master/1-two-sum)|
 |2|[add-two-numbers](https://github.com/jokerYellow/LeetCodeGo/tree/master/2-add-two-numbers)|
 |3|[longest-substring-without-repeating-characters](https://github.com/jokerYellow/LeetCodeGo/tree/master/3-longest-substring-without-repeating-characters)|
 |4|[median-of-two-sorted-arrays](https://github.com/jokerYellow/LeetCodeGo/tree/master/4-median-of-two-sorted-arrays)|
