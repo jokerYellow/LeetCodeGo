@@ -26,6 +26,38 @@ Output: "bb"
 */
 
 func longestPalindrome(s string) string {
+	if len(s) <= 1 {
+		return s
+	}
+	var start, end int
+	for i := 0; i < len(s); i++ {
+		length1 := expandAroundCenter(s, i, i)
+		length2 := expandAroundCenter(s, i, i+1)
+		length := max(length1, length2)
+		if length > end-start {
+			start = i - (length-1)/2
+			end = i + length/2
+		}
+	}
+	return s[start : end+1]
+}
+
+func max(l, r int) int {
+	if l > r {
+		return l
+	}
+	return r
+}
+
+func expandAroundCenter(bytes string, left, right int) int {
+	for left >= 0 && right < len(bytes) && bytes[left] == bytes[right] {
+		left--
+		right++
+	}
+	return right - left - 1
+}
+
+func _longestPalindrome(s string) string {
 	normal := []byte(s)
 	reversed := reverse(normal)
 	var longest []byte
