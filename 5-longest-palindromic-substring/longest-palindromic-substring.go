@@ -1,9 +1,5 @@
 package __longest_palindromic_substring
 
-import (
-	"fmt"
-)
-
 /*
 https://leetcode.com/problems/longest-palindromic-substring/
 5. Longest Palindromic Substring
@@ -29,58 +25,48 @@ Input: "cbbd"
 Output: "bb"
 */
 
-type record struct {
-	s string
-	b bool
-}
-
 func longestPalindrome(s string) string {
-	info := map[string]record{}
-	l := checkAndlongestPalindrome(s, &info)
-	return l
-}
-
-func checkAndlongestPalindrome(s string, info *map[string]record) (rt string) {
-	fmt.Println(s)
-	if palindrome(s) {
-		(*info)[s] = record{s, true}
-		return s
-	}
-	l1 := s[0 : len(s)-1]
-	l2 := s[1:]
-	t1 := palindrome(l1)
-	t2 := palindrome(l2)
-	if t1 {
-		(*info)[l1] = record{l1, true}
-		return l1
-	} else if t2 {
-		(*info)[l2] = record{l2, true}
-		return l2
-	} else {
-		p1 := checkAndlongestPalindrome(l1, info)
-		p2 := checkAndlongestPalindrome(l2, info)
-		if len(p1) > len(p2) {
-			(*info)[l2] = record{l2, true}
-			return p1
-		} else {
-
-			return p2
+	normal := []byte(s)
+	reversed := reverse(normal)
+	var longest []byte
+	length := len(s)
+	for i, _ := range reversed {
+		for j, _ := range normal {
+			var current []byte
+			if reversed[i] == normal[j] {
+				for k := 0; j+k < length && i+k < length; k++ {
+					if reversed[i+k] == normal[j+k] {
+						current = append(current, reversed[i+k])
+						if len(current) > len(longest) && isPalindrome(current) {
+							longest = current
+						}
+					} else {
+						break
+					}
+				}
+			}
 		}
 	}
+	return string(longest)
 }
 
-func palindrome(s string) bool {
-	l := 0
-	r := len(s) - 1
-	for {
-		if l >= r {
-			return true
-		}
-		if s[l] == s[r] && l < r {
-			l++
-			r--
-		} else {
+func isPalindrome(s []byte) bool {
+	i := 0
+	j := len(s) - 1
+	for i <= j {
+		if s[i] != s[j] {
 			return false
 		}
+		i++
+		j--
 	}
+	return true
+}
+
+func reverse(bytes []byte) []byte {
+	rt := []byte{}
+	for j := len(bytes) - 1; j >= 0; j-- {
+		rt = append(rt, bytes[j])
+	}
+	return rt
 }

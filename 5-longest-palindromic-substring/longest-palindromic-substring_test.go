@@ -1,83 +1,32 @@
 package __longest_palindromic_substring
 
 import (
+	"fmt"
 	"github.com/jokerYellow/leetcode/utils"
 	"testing"
 )
 
-func Test1(t *testing.T) {
-	input := "babad"
-	expect := []string{"bab", "aba"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
-	}
+type testcase struct {
+	input  string
+	expect []string
 }
 
-func Test2(t *testing.T) {
-	input := "cbba"
-	expect := []string{"bb"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
+func Test(t *testing.T) {
+	cases := []testcase{
+		{"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",[]string{"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"}},
+		{"aacdefcaa", []string{"aa"}},
+		{"abcda", []string{"a", "b", "c", "d"}},
+		{"a", []string{"a"}},
+		{"", []string{""}},
+		{"bb", []string{"bb"}},
+		{"babad", []string{"bab", "aba"}},
+		{"cbba", []string{"bb"}},
 	}
-}
-
-func Test3(t *testing.T) {
-	input := "cbbacdeffffedc"
-	expect := []string{"cdeffffedc"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
-	}
-}
-
-func Test4(t *testing.T) {
-	input := "faaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaf"
-	expect := []string{"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
-	}
-}
-
-func Test5(t *testing.T) {
-	input := "a"
-	expect := []string{"a"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
-	}
-}
-
-func Test6(t *testing.T) {
-	input := ""
-	expect := []string{""}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
-	}
-}
-
-func Test7(t *testing.T) {
-	input := "ab"
-	expect := []string{"b", "a"}
-	output := longestPalindrome(input)
-
-	if !utils.Contain(expect, output) {
-		utils.Print(expect, output)
-		t.Fail()
+	for _, item := range cases {
+		output := longestPalindrome(item.input)
+		fmt.Println(item.input, item.expect, output)
+		if !utils.Contain(item.expect, output) {
+			t.Fail()
+		}
 	}
 }
