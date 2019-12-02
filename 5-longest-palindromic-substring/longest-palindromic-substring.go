@@ -26,6 +26,24 @@ Output: "bb"
 */
 
 func longestPalindrome(s string) string {
+	length := len(s)
+	var res string
+	dp := make([][]bool, length)
+	for i := 0; i < length; i++ {
+		dp[i] = make([]bool, length)
+	}
+	for i := length - 1; i >= 0; i-- {
+		for j := i; j < length; j++ {
+			dp[i][j] = s[i] == s[j] && (j-i < 3 || dp[i+1][j-1])
+			if dp[i][j] && (res == "" || j-i+1 > len(res)) {
+				res = s[i : j+1]
+			}
+		}
+	}
+	return res
+}
+
+func _1longestPalindrome(s string) string {
 	if len(s) <= 1 {
 		return s
 	}
