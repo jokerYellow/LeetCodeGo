@@ -26,38 +26,32 @@ Output: "bb"
 */
 
 func longestPalindrome(s string) string {
-	length := len(s)
-	var res string
-	dp := make([][]bool, length)
-	for i := 0; i < length; i++ {
-		dp[i] = make([]bool, length)
-	}
-	for i := length - 1; i >= 0; i-- {
-		for j := i; j < length; j++ {
-			dp[i][j] = s[i] == s[j] && (j-i < 3 || dp[i+1][j-1])
-			if dp[i][j] && (res == "" || j-i+1 > len(res)) {
-				res = s[i : j+1]
-			}
-		}
-	}
-	return res
+	return longestPalindrome_expandCenter(s)
 }
 
-func _1longestPalindrome(s string) string {
-	if len(s) <= 1 {
+//1,2,1
+//index:1
+//length:3
+//1-3/2,1+3/2
+//1,2,2,1
+//index:1,length:4
+//1-4/2+1,1+4/2
+func longestPalindrome_expandCenter(s string) string {
+	if len(s) < 2 {
 		return s
 	}
-	var start, end int
+	var longest, l, r int
 	for i := 0; i < len(s); i++ {
-		length1 := expandAroundCenter(s, i, i)
-		length2 := expandAroundCenter(s, i, i+1)
-		length := max(length1, length2)
-		if length > end-start {
-			start = i - (length-1)/2
-			end = i + length/2
+		length := max(expandCenter(s, i, i), expandCenter(s, i, i+1))
+		if length > longest {
+			left := i - (length-1)/2
+			right := i + length/2
+			l = left
+			r = right
+			longest = length
 		}
 	}
-	return s[start : end+1]
+	return s[l : r+1]
 }
 
 func max(l, r int) int {
@@ -67,12 +61,37 @@ func max(l, r int) int {
 	return r
 }
 
-func expandAroundCenter(bytes string, left, right int) int {
-	for left >= 0 && right < len(bytes) && bytes[left] == bytes[right] {
+func expandCenter(s string, left, right int) int {
+	length := 0
+	for left >= 0 && right < len(s) && s[left] == s[right] {
+		length = right - left + 1
 		left--
 		right++
 	}
-	return right - left - 1
+	return length
+}
+
+//dynamic programming
+func longestPalindrome_dp(s string) string {
+	length := len(s)
+	var res string
+	dp := make([][]bool, length)
+	for i := 0; i < length; i++ {
+		dp[i] = make([]bool, length)
+	}
+	for i := 0; i < length; i++ {
+		for j := i; j >= 0; j-- {
+			if s[i] == s[j] && i-j < 3 {
+				dp[i][j] = true
+			} else if s[i] == s[j] && dp[i-1][j+1] {
+				dp[i][j] = true
+			}
+			if dp[i][j] && i-j+1 > len(res) {
+				res = s[j : i+1]
+			}
+		}
+	}
+	return res
 }
 
 func _longestPalindrome(s string) string {
