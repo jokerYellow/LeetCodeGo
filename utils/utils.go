@@ -71,6 +71,26 @@ func CheckEqual(a, b [][]int) bool {
 	return true
 }
 
+//item in a ,is alse in b
+func CheckItemsEqual(a, b [][]int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for _, ia := range a {
+		contain := false
+		for _, ib := range b {
+			if CheckEqualArr(ia, ib) {
+				contain = true
+				break
+			}
+		}
+		if !contain {
+			return false
+		}
+	}
+	return true
+}
+
 func CheckEqualArr(a, b []int) bool {
 	if len(a) != len(b) {
 		return false
