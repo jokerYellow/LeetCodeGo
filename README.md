@@ -1,5 +1,5 @@
 # LeetCode
- >count:68 
+ >count:69 
 
 |#|Title|
 | --- | --- |
@@ -22,6 +22,7 @@
 |22|[generate-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/22-generate-parentheses)|
 |23|[merge-k-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/23-merge-k-sorted-lists)|
 |26|[remove-duplicates-from-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/26-remove-duplicates-from-sorted-array)|
+|27|[remove-element](https://github.com/jokerYellow/LeetCodeGo/tree/master/27-remove-element)|
 |32|[longest-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/32-longest-valid-parentheses)|
 |33|[search-in-rotated-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/33-search-in-rotated-sorted-array)|
 |35|[search-insert-position](https://github.com/jokerYellow/LeetCodeGo/tree/master/35-search-insert-position)|
