@@ -103,6 +103,18 @@ func CheckEqualArr(a, b []int) bool {
 	return true
 }
 
+func CheckStringsEqualArr(a, b []string) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i, v := range a {
+		if b[i] != v {
+			return false
+		}
+	}
+	return true
+}
+
 func Print(expect, output interface{}) {
 	fmt.Printf("expect:%s\noutput:%s\n", expect, output)
 }
