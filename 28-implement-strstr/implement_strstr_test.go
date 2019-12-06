@@ -10,6 +10,7 @@ type testCase struct {
 
 func Test(t *testing.T) {
 	cases := []testCase{
+		{"你好", "你", 0},
 		{"", "1", -1},
 		{"", "", 0},
 		{"helaaalo", "laaaloo", -1},
