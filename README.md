@@ -1,5 +1,5 @@
 # LeetCode
- >count:74 
+ >count:75 
 
 |#|Title|
 | --- | --- |
@@ -30,6 +30,7 @@
 |29|[divide-two-integers](https://github.com/jokerYellow/LeetCodeGo/tree/master/29-divide-two-integers)|
 |32|[longest-valid-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/32-longest-valid-parentheses)|
 |33|[search-in-rotated-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/33-search-in-rotated-sorted-array)|
+|34|[find-first-and-last-position-of-element-in-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/34-find-first-and-last-position-of-element-in-sorted-array)|
 |35|[search-insert-position](https://github.com/jokerYellow/LeetCodeGo/tree/master/35-search-insert-position)|
 |38|[count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say)|
 |42|[trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)|
