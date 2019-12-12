@@ -1,5 +1,5 @@
 # LeetCode
- >count:77 
+ >count:78 
 
 |#|Title|
 | --- | --- |
@@ -36,6 +36,7 @@
 |38|[count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say)|
 |42|[trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)|
 |43|[multiply-strings](https://github.com/jokerYellow/LeetCodeGo/tree/master/43-multiply-strings)|
+|53|[maximum-subarray](https://github.com/jokerYellow/LeetCodeGo/tree/master/53-maximum-subarray)|
 |54|[spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)|
 |55|[jump-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/55-jump-game)|
 |57|[insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval)|
