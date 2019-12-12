@@ -1,5 +1,5 @@
 # LeetCode
- >count:78 
+ >count:79 
 
 |#|Title|
 | --- | --- |
@@ -33,6 +33,7 @@
 |33|[search-in-rotated-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/33-search-in-rotated-sorted-array)|
 |34|[find-first-and-last-position-of-element-in-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/34-find-first-and-last-position-of-element-in-sorted-array)|
 |35|[search-insert-position](https://github.com/jokerYellow/LeetCodeGo/tree/master/35-search-insert-position)|
+|36|[valid-sudoku](https://github.com/jokerYellow/LeetCodeGo/tree/master/36-valid-sudoku)|
 |38|[count-and-say](https://github.com/jokerYellow/LeetCodeGo/tree/master/38-count-and-say)|
 |42|[trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)|
 |43|[multiply-strings](https://github.com/jokerYellow/LeetCodeGo/tree/master/43-multiply-strings)|
