@@ -1,4 +1,5 @@
 package leetcode
+
 /*
 https://leetcode.com/problems/maximum-subarray/
 53. Maximum Subarray
@@ -21,30 +22,23 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
- */
+*/
 func maxSubArray(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}
-	leftBound := 0
-	rightBound := leftBound
-	maxValue := nums[leftBound]
-	var current int
-	for rightBound < len(nums) {
-		if leftBound == rightBound {
-			current = nums[leftBound]
-		} else {
-			current += nums[rightBound]
-		}
-		if current > maxValue {
-			maxValue = current
-		}
-		if current <= 0 {
-			leftBound = rightBound + 1
-			rightBound = leftBound
-		} else {
-			rightBound += 1
-		}
+	maxSoFar := nums[0]
+	maxEndHere := maxSoFar
+	for i := 1; i < len(nums); i++ {
+		maxEndHere = max(nums[i], maxEndHere+nums[i])
+		maxSoFar = max(maxSoFar, maxEndHere)
 	}
-	return maxValue
+	return maxSoFar
+}
+
+func max(l, r int) int {
+	if l > r {
+		return l
+	}
+	return r
 }
