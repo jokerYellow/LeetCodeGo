@@ -71,6 +71,29 @@ func CheckEqual(a, b [][]int) bool {
 	return true
 }
 
+func CheckElementsEqual(nums1, nums2 [][]int) bool {
+	if len(nums1) != len(nums2) {
+		return false
+	}
+	for _, v := range nums1 {
+		if !checkElementsContain(nums2, v) {
+			return false
+		}
+	}
+	return true
+}
+
+func checkElementsContain(nums1 [][]int, element []int) bool {
+	flag := false
+	for _, item := range nums1 {
+		if CheckEqualArr(item, element) {
+			flag = true
+			break
+		}
+	}
+	return flag
+}
+
 //item in a ,is alse in b
 func CheckItemsEqual(a, b [][]int) bool {
 	if len(a) != len(b) {
