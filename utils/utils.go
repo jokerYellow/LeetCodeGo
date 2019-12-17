@@ -139,7 +139,19 @@ func CheckStringsEqualArr(a, b []string) bool {
 }
 
 func Print(expect, output interface{}) {
-	fmt.Printf("expect:%s\noutput:%s\n", expect, output)
+	fmt.Printf("expect:%s\noutput:%s\n", transform(expect), transform(output))
+}
+
+func transform(value interface{}) string {
+	switch v := value.(type) {
+	case []byte:
+		return fmt.Sprintf("%s:%v", v, v)
+	case []rune:
+		return fmt.Sprintf("%s:%v", string(v), v)
+	default:
+		return fmt.Sprintf("%v", v)
+	}
+
 }
 
 func Contain(arr []string, s string) bool {
