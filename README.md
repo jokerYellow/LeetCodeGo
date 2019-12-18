@@ -1,5 +1,5 @@
 # LeetCode
- >count:84 
+ >count:85 
 
 |#|Title|
 | --- | --- |
@@ -48,6 +48,7 @@
 |67|[add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)|
 |70|[climbing-stairs](https://github.com/jokerYellow/LeetCodeGo/tree/master/70-climbing-stairs)|
 |76|[minimum-window-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/76-minimum-window-substring)|
+|79|[word-search](https://github.com/jokerYellow/LeetCodeGo/tree/master/79-word-search)|
 |82|[remove-duplicates-from-sorted-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/82-remove-duplicates-from-sorted-list-ii)|
 |83|[remove-duplicates-from-sorted-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/83-remove-duplicates-from-sorted-list)|
 |84|[largest-rectangle-in-histogram](https://github.com/jokerYellow/LeetCodeGo/tree/master/84-largest-rectangle-in-histogram)|
