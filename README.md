@@ -1,5 +1,5 @@
 # LeetCode
- >count:85 
+ >count:86 
 
 |#|Title|
 | --- | --- |
@@ -52,6 +52,7 @@
 |82|[remove-duplicates-from-sorted-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/82-remove-duplicates-from-sorted-list-ii)|
 |83|[remove-duplicates-from-sorted-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/83-remove-duplicates-from-sorted-list)|
 |84|[largest-rectangle-in-histogram](https://github.com/jokerYellow/LeetCodeGo/tree/master/84-largest-rectangle-in-histogram)|
+|88|[merge-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/88-merge-sorted-array)|
 |92|[reverse-linked-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/92-reverse-linked-list-ii)|
 |94|[binary-tree-inorder-traversal](https://github.com/jokerYellow/LeetCodeGo/tree/master/94-binary-tree-inorder-traversal)|
 |121|[best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)|
