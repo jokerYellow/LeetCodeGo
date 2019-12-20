@@ -1,5 +1,5 @@
 # LeetCode
- >count:87 
+ >count:88 
 
 |#|Title|
 | --- | --- |
@@ -40,6 +40,7 @@
 |42|[trapping-rain-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/42-trapping-rain-water)|
 |43|[multiply-strings](https://github.com/jokerYellow/LeetCodeGo/tree/master/43-multiply-strings)|
 |46|[permutations](https://github.com/jokerYellow/LeetCodeGo/tree/master/46-permutations)|
+|47|[permutations-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/47-permutations-ii)|
 |53|[maximum-subarray](https://github.com/jokerYellow/LeetCodeGo/tree/master/53-maximum-subarray)|
 |54|[spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)|
 |55|[jump-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/55-jump-game)|
