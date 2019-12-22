@@ -1,5 +1,5 @@
 # LeetCode
- >count:88 
+ >count:90 
 
 |#|Title|
 | --- | --- |
@@ -24,6 +24,7 @@
 |22|[generate-parentheses](https://github.com/jokerYellow/LeetCodeGo/tree/master/22-generate-parentheses)|
 |23|[merge-k-sorted-lists](https://github.com/jokerYellow/LeetCodeGo/tree/master/23-merge-k-sorted-lists)|
 |24|[swap-nodes-in-pairs](https://github.com/jokerYellow/LeetCodeGo/tree/master/24-swap-nodes-in-pairs)|
+|25|[reverse-nodes-in-k-group](https://github.com/jokerYellow/LeetCodeGo/tree/master/25-reverse-nodes-in-k-group)|
 |26|[remove-duplicates-from-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/26-remove-duplicates-from-sorted-array)|
 |27|[remove-element](https://github.com/jokerYellow/LeetCodeGo/tree/master/27-remove-element)|
 |28|[implement-strstr](https://github.com/jokerYellow/LeetCodeGo/tree/master/28-implement-strstr)|
@@ -57,6 +58,7 @@
 |88|[merge-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/88-merge-sorted-array)|
 |92|[reverse-linked-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/92-reverse-linked-list-ii)|
 |94|[binary-tree-inorder-traversal](https://github.com/jokerYellow/LeetCodeGo/tree/master/94-binary-tree-inorder-traversal)|
+|112|[path-sum](https://github.com/jokerYellow/LeetCodeGo/tree/master/112-path-sum)|
 |121|[best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)|
 |141|[linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle)|
 |142|[linked-list-cycle-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/142-linked-list-cycle-ii)|

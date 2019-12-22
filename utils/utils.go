@@ -148,10 +148,27 @@ func transform(value interface{}) string {
 		return fmt.Sprintf("%s:%v", v, v)
 	case []rune:
 		return fmt.Sprintf("%s:%v", string(v), v)
+	case *ListNode:
+		return v.description()
 	default:
 		return fmt.Sprintf("%v", v)
 	}
 
+}
+
+func (this *ListNode) description() string {
+	rt := ""
+	c := this
+	for c != nil {
+		if rt != "" {
+			rt = fmt.Sprintf("%s,%d", rt, c.Val)
+		} else {
+			rt = fmt.Sprintf("%d", c.Val)
+		}
+
+		c = c.Next
+	}
+	return rt
 }
 
 func Contain(arr []string, s string) bool {
