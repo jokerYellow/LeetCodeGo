@@ -31,7 +31,7 @@ You may not alter the values in the list's nodes, only nodes itself may be chang
 import (
 	"github.com/jokerYellow/leetcode/utils"
 )
-
+//todo: understand and rewrite
 func reverseKGroup(head *utils.ListNode, k int) *utils.ListNode {
 	curr := head
 	count := 0
