@@ -1,4 +1,5 @@
 package leetcode
+
 /*
 https://leetcode.com/problems/reverse-nodes-in-k-group/
 25. Reverse Nodes in k-Group
@@ -27,28 +28,28 @@ Note:
 
 Only constant extra memory is allowed.
 You may not alter the values in the list's nodes, only nodes itself may be changed.
- */
+*/
 import (
 	"github.com/jokerYellow/leetcode/utils"
 )
-//todo: understand and rewrite
+
 func reverseKGroup(head *utils.ListNode, k int) *utils.ListNode {
-	curr := head
 	count := 0
-	for curr != nil && count != k {
-		curr = curr.Next
+	var preHead = head
+	for count < k-1 && preHead != nil  {
+		preHead = preHead.Next
 		count++
 	}
-	if count == k {
-		curr = reverseKGroup(curr, k)
-		for count > 0 {
-			tmp := head.Next
-			head.Next = curr
-			curr = head
-			head = tmp
-			count--
-		}
-		head = curr
+	if count != k-1 || preHead == nil {
+		return head
+	}
+	preHead.Next = reverseKGroup(preHead.Next, k)
+	for count > 0 {
+		next := head.Next
+		head.Next = preHead.Next
+		preHead.Next = head
+		head = next
+		count--
 	}
 	return head
 }
