@@ -55,22 +55,18 @@ rotate the input matrix in-place such that it becomes:
 ]
 */
 func rotate(matrix [][]int) {
-	_rotate(matrix, 0)
-}
-
-func _rotate(matrix [][]int, index int) {
 	length := len(matrix)
-	if index >= ((length + 1) / 2) {
-		return
-	}
-	for i := index; i < length-index-1; i++ {
-		p1x, p1y := index, i
-		p2x, p2y := rotatePoint(p1x, p1y, length)
-		p3x, p3y := rotatePoint(p2x, p2y, length)
-		p4x, p4y := rotatePoint(p3x, p3y, length)
-		matrix[p1x][p1y], matrix[p2x][p2y], matrix[p3x][p3y], matrix[p4x][p4y] = matrix[p4x][p4y], matrix[p1x][p1y], matrix[p2x][p2y], matrix[p3x][p3y]
-	}
-	_rotate(matrix, index+1)
+	var index int
+	for index < ((length + 1) / 2){
+		for i := index; i < length-index-1; i++ {
+			p1x, p1y := index, i
+			p2x, p2y := rotatePoint(p1x, p1y, length)
+			p3x, p3y := rotatePoint(p2x, p2y, length)
+			p4x, p4y := rotatePoint(p3x, p3y, length)
+			matrix[p1x][p1y], matrix[p2x][p2y], matrix[p3x][p3y], matrix[p4x][p4y] = matrix[p4x][p4y], matrix[p1x][p1y], matrix[p2x][p2y], matrix[p3x][p3y]
+		}
+		index++
+	} 
 }
 
 func rotatePoint(x, y, length int) (int, int) {
