@@ -179,3 +179,27 @@ func Contain(arr []string, s string) bool {
 	}
 	return false
 }
+
+func CheckStringsArrEqual(str1,str2 [][]string)bool{
+	if len(str1) != len(str2){
+		return false
+	}
+	for i:=0;i<len(str1);i++{
+		if !CheckStringsEqual(str1[i],str2[i]){
+			return false
+		}
+	}
+	return true
+}
+
+func CheckStringsEqual(str1,str2 []string)bool{
+	if len(str1) != len(str2){
+		return false
+	}
+	for i:=0;i<len(str1);i++{
+		if str1[i] != str2[i]{
+			return false
+		}
+	}
+	return true
+}
