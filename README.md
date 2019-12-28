@@ -1,5 +1,5 @@
 # LeetCode
- >count:93 
+ >count:94 
 
 |#|Title|
 | --- | --- |
@@ -44,6 +44,7 @@
 |47|[permutations-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/47-permutations-ii)|
 |48|[rotate-image](https://github.com/jokerYellow/LeetCodeGo/tree/master/48-rotate-image)|
 |49|[group-anagrams](https://github.com/jokerYellow/LeetCodeGo/tree/master/49-group-anagrams)|
+|50|[powx-n](https://github.com/jokerYellow/LeetCodeGo/tree/master/50-powx-n)|
 |53|[maximum-subarray](https://github.com/jokerYellow/LeetCodeGo/tree/master/53-maximum-subarray)|
 |54|[spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)|
 |55|[jump-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/55-jump-game)|
