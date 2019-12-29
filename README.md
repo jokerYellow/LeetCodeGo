@@ -1,5 +1,5 @@
 # LeetCode
- >count:94 
+ >count:95 
 
 |#|Title|
 | --- | --- |
@@ -48,6 +48,7 @@
 |53|[maximum-subarray](https://github.com/jokerYellow/LeetCodeGo/tree/master/53-maximum-subarray)|
 |54|[spiral-matrix](https://github.com/jokerYellow/LeetCodeGo/tree/master/54-spiral-matrix)|
 |55|[jump-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/55-jump-game)|
+|56|[merge-intervals](https://github.com/jokerYellow/LeetCodeGo/tree/master/56-merge-intervals)|
 |57|[insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval)|
 |58|[length-of-last-word](https://github.com/jokerYellow/LeetCodeGo/tree/master/58-length-of-last-word)|
 |59|[spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-spiral-matrix-ii)|
