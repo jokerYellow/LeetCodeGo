@@ -45,15 +45,16 @@ Output: "2314"
 "321"
 
 */
+//todo refactor
 func getPermutation(n int, k int) string {
 	arr := make([]byte, n)
 	for i := 0; i < n; i++ {
 		arr[i] = '0' + byte(i+1)
 	}
-	return string(_getPermutation(arr, n-1, k))
+	return string(_getPermutation(arr, k))
 }
 
-func _getPermutation(arr []byte, n int, k int) []byte {
+func _getPermutation(arr []byte, k int) []byte {
 	if k == 0 {
 		return arr
 	}
@@ -66,23 +67,21 @@ func _getPermutation(arr []byte, n int, k int) []byte {
 	if k == 1 && len(arr) == 2 {
 		return arr
 	}
+	n := len(arr) - 1
 	count := v(n)
 	a := k / count
 	aa := float32(k) / float32(count)
 	var value byte
-	lastCount := 0
 	lastK := 0
 	if float32(a) < aa {
 		value = arr[a]
+		lastK = k - count*a
+		if lastK < 1 {
+			lastK = 1
+		}
 	} else {
 		value = arr[a-1]
-	}
-	if count <= k {
-		lastCount = n
-		lastK = k
-	} else {
-		lastCount = n - count
-		lastK = k - count
+		lastK = k - (a-1)*count
 	}
 	var buf []byte
 	buf = append(buf, value)
@@ -92,7 +91,7 @@ func _getPermutation(arr []byte, n int, k int) []byte {
 			newArr = append(newArr, arr[i])
 		}
 	}
-	buf = append(buf, _getPermutation(newArr, lastCount, lastK)...)
+	buf = append(buf, _getPermutation(newArr, lastK)...)
 	return buf
 }
 

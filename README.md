@@ -1,5 +1,5 @@
 # LeetCode
- >count:95 
+ >count:96 
 
 |#|Title|
 | --- | --- |
@@ -52,6 +52,7 @@
 |57|[insert-interval](https://github.com/jokerYellow/LeetCodeGo/tree/master/57-insert-interval)|
 |58|[length-of-last-word](https://github.com/jokerYellow/LeetCodeGo/tree/master/58-length-of-last-word)|
 |59|[spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-spiral-matrix-ii)|
+|60|[permutation-sequence](https://github.com/jokerYellow/LeetCodeGo/tree/master/60-permutation-sequence)|
 |67|[add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)|
 |70|[climbing-stairs](https://github.com/jokerYellow/LeetCodeGo/tree/master/70-climbing-stairs)|
 |76|[minimum-window-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/76-minimum-window-substring)|
