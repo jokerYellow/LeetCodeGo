@@ -1,5 +1,5 @@
 # LeetCode
- >count:96 
+ >count:97 
 
 |#|Title|
 | --- | --- |
@@ -63,6 +63,7 @@
 |88|[merge-sorted-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/88-merge-sorted-array)|
 |92|[reverse-linked-list-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/92-reverse-linked-list-ii)|
 |94|[binary-tree-inorder-traversal](https://github.com/jokerYellow/LeetCodeGo/tree/master/94-binary-tree-inorder-traversal)|
+|100|[same-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/100-same-tree)|
 |112|[path-sum](https://github.com/jokerYellow/LeetCodeGo/tree/master/112-path-sum)|
 |121|[best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)|
 |141|[linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle)|
