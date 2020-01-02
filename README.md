@@ -1,5 +1,5 @@
 # LeetCode
- >count:97 
+ >count:98 
 
 |#|Title|
 | --- | --- |
@@ -77,6 +77,7 @@
 |206|[reverse-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/206-reverse-linked-list)|
 |208|[implement-trie-prefix-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/208-implement-trie-prefix-tree)|
 |215|[kth-largest-element-in-an-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/215-kth-largest-element-in-an-array)|
+|217|[contains-duplicate](https://github.com/jokerYellow/LeetCodeGo/tree/master/217-contains-duplicate)|
 |218|[the-skyline-problem](https://github.com/jokerYellow/LeetCodeGo/tree/master/218-the-skyline-problem)|
 |234|[palindrome-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/234-palindrome-linked-list)|
 |237|[delete-node-in-a-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/237-delete-node-in-a-linked-list)|
