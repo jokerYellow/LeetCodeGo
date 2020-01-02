@@ -45,7 +45,6 @@ Output: "2314"
 "321"
 
 */
-//todo refactor
 func getPermutation(n int, k int) string {
 	arr := make([]byte, n)
 	for i := 0; i < n; i++ {
@@ -53,45 +52,25 @@ func getPermutation(n int, k int) string {
 	}
 	return string(_getPermutation(arr, k))
 }
-
+//通过计算出首位char，来缩小问题规模。
 func _getPermutation(arr []byte, k int) []byte {
-	if k == 0 {
-		return arr
-	}
-	if k == 1 && len(arr) == 1 {
+	if k <= 1 {
 		return arr
 	}
 	if k == 2 && len(arr) == 2 {
 		return []byte{arr[1], arr[0]}
 	}
-	if k == 1 && len(arr) == 2 {
-		return arr
-	}
-	n := len(arr) - 1
-	count := v(n)
-	a := k / count
-	aa := float32(k) / float32(count)
-	var value byte
-	lastK := 0
-	if float32(a) < aa {
-		value = arr[a]
-		lastK = k - count*a
-		if lastK < 1 {
-			lastK = 1
-		}
-	} else {
-		value = arr[a-1]
-		lastK = k - (a-1)*count
+	count := v(len(arr) - 1)
+	removeIndex := k / count
+	if k%count == 0 {
+		removeIndex--
 	}
 	var buf []byte
-	buf = append(buf, value)
+	buf = append(buf, arr[removeIndex])
 	var newArr []byte
-	for i := 0; i < len(arr); i++ {
-		if arr[i] != value {
-			newArr = append(newArr, arr[i])
-		}
-	}
-	buf = append(buf, _getPermutation(newArr, lastK)...)
+	newArr = append(newArr, arr[:removeIndex]...)
+	newArr = append(newArr, arr[removeIndex+1:]...)
+	buf = append(buf, _getPermutation(newArr, k-count*removeIndex)...)
 	return buf
 }
 
