@@ -1,5 +1,5 @@
 # LeetCode
- >count:101 
+ >count:102 
 
 |#|Title|
 | --- | --- |
@@ -55,6 +55,7 @@
 |60|[permutation-sequence](https://github.com/jokerYellow/LeetCodeGo/tree/master/60-permutation-sequence)|
 |66|[plus-one](https://github.com/jokerYellow/LeetCodeGo/tree/master/66-plus-one)|
 |67|[add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)|
+|69|[sqrtx](https://github.com/jokerYellow/LeetCodeGo/tree/master/69-sqrtx)|
 |70|[climbing-stairs](https://github.com/jokerYellow/LeetCodeGo/tree/master/70-climbing-stairs)|
 |76|[minimum-window-substring](https://github.com/jokerYellow/LeetCodeGo/tree/master/76-minimum-window-substring)|
 |79|[word-search](https://github.com/jokerYellow/LeetCodeGo/tree/master/79-word-search)|
