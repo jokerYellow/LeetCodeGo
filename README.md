@@ -1,5 +1,5 @@
 # LeetCode
- >count:102 
+ >count:103 
 
 |#|Title|
 | --- | --- |
@@ -85,6 +85,7 @@
 |220|[contains-duplicate-iii](https://github.com/jokerYellow/LeetCodeGo/tree/master/220-contains-duplicate-iii)|
 |234|[palindrome-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/234-palindrome-linked-list)|
 |237|[delete-node-in-a-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/237-delete-node-in-a-linked-list)|
+|367|[valid-perfect-square](https://github.com/jokerYellow/LeetCodeGo/tree/master/367-valid-perfect-square)|
 |372|[super-pow](https://github.com/jokerYellow/LeetCodeGo/tree/master/372-super-pow)|
 |384|[shuffle-an-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/384-shuffle-an-array)|
 |387|[first-unique-character-in-a-string](https://github.com/jokerYellow/LeetCodeGo/tree/master/387-first-unique-character-in-a-string)|
