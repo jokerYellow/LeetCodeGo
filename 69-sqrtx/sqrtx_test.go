@@ -12,6 +12,7 @@ type testCase struct {
 
 func Test(t *testing.T) {
 	cases := []testCase{
+		{36, 6},
 		{4, 2},
 		{8, 2},
 		{1, 1},

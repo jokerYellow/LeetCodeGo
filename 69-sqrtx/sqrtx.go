@@ -30,17 +30,21 @@ Explanation: The square root of 8 is 2.82842..., and since
              the decimal part is truncated, 2 is returned.
 */
 func mySqrt(x int) int {
-	i := 0
+	top := x
+	bottom := 0
+	result := 0
 	for {
+		i := (top + bottom + 1) / 2
 		t := i * i
-		if t == x {
+		t1 := (i + 1) * (i + 1)
+		if t <= x && t1 > x {
+			result = i
 			break
 		} else if t < x {
-			i++
-		} else {
-			i--
-			break
+			bottom = i
+		} else if t > x {
+			top = i
 		}
 	}
-	return i
+	return result
 }
