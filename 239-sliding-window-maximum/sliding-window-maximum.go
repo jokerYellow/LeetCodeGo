@@ -38,6 +38,25 @@ func maxSlidingWindow(nums []int, k int) []int {
 	var rt []int
 	var t []int
 	for i := 0; i < len(nums); i++ {
+		for len(t) > 0 && t[0] <= i-k {
+			t = t[1:]
+		}
+
+		for len(t) != 0 && nums[t[len(t)-1]] < nums[i] {
+			t = t[:len(t)-1]
+		}
+		t = append(t, i)
+		if i >= k-1 {
+			rt = append(rt, nums[t[0]])
+		}
+	}
+	return rt
+}
+
+func _maxSlidingWindow(nums []int, k int) []int {
+	var rt []int
+	var t []int
+	for i := 0; i < len(nums); i++ {
 		t = append(t, nums[i])
 		if len(t) == k+1 {
 			t = t[1:]
