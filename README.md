@@ -1,5 +1,5 @@
 # LeetCode
- >count:104 
+ >count:105 
 
 |#|Title|
 | --- | --- |
@@ -53,6 +53,7 @@
 |58|[length-of-last-word](https://github.com/jokerYellow/LeetCodeGo/tree/master/58-length-of-last-word)|
 |59|[spiral-matrix-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/59-spiral-matrix-ii)|
 |60|[permutation-sequence](https://github.com/jokerYellow/LeetCodeGo/tree/master/60-permutation-sequence)|
+|61|[rotate_list](https://github.com/jokerYellow/LeetCodeGo/tree/master/61-rotate_list)|
 |66|[plus-one](https://github.com/jokerYellow/LeetCodeGo/tree/master/66-plus-one)|
 |67|[add-binary](https://github.com/jokerYellow/LeetCodeGo/tree/master/67-add-binary)|
 |69|[sqrtx](https://github.com/jokerYellow/LeetCodeGo/tree/master/69-sqrtx)|
