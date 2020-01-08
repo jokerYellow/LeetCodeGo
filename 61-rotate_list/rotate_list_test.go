@@ -13,6 +13,7 @@ type testCase struct {
 
 func Test(t *testing.T) {
 	cases := []testCase{
+		{utils.GenerateLinkList([]int{1, 2}), 1, utils.GenerateLinkList([]int{2, 1})},
 		{utils.GenerateLinkList([]int{1, 2, 3, 4, 5}), 2, utils.GenerateLinkList([]int{4, 5, 1, 2, 3})},
 		{utils.GenerateLinkList([]int{0, 1, 2}), 4, utils.GenerateLinkList([]int{2, 0, 1})},
 		{utils.GenerateLinkList([]int{0, 1, 2}), 0, utils.GenerateLinkList([]int{0, 1, 2})},
