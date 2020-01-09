@@ -57,6 +57,7 @@ s = "acdcb"
 p = "a*c?b"
 Output: false
 */
+//todo:too slow,should be faster
 func isMatch(s string, p string) bool {
 	//fmt.Println(s, p)
 	if p == "*" {
