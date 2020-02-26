@@ -3,7 +3,7 @@ package utils
 import "math"
 
 const null string = "null"
-
+const Null = null
 type TreeNode struct {
 	Val         int
 	Left, Right *TreeNode
@@ -23,10 +23,10 @@ func (left *TreeNode) Equal(right *TreeNode) bool {
 generate tree from int or null data
 */
 func NewTree(vals []interface{}) *TreeNode {
-	root := new(TreeNode)
-	if len(vals) == 0 {
-		return root
+	if len(vals) == 0{
+		return nil
 	}
+	root := new(TreeNode)
 	setValue(root, 0, vals)
 	return root
 }
@@ -70,6 +70,9 @@ i4	   i5
 
 */
 func Description(root *TreeNode) []interface{} {
+	if root == nil {
+		return []interface{}{""}
+	}
 	d := depth(root)
 	vals := make([]interface{}, int(math.Pow(float64(2), float64(d)))-1)
 	setValues(0, root, vals)

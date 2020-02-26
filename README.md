@@ -1,5 +1,5 @@
 # LeetCode
- >count:109 
+ >count:118 
 
 |#|Title|
 | --- | --- |
@@ -70,8 +70,11 @@
 |100|[same-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/100-same-tree)|
 |101|[symmetric-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/101-symmetric-tree)|
 |110|[balanced-binary-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/110-balanced-binary-tree)|
+|111|[minimum-depth-of-binary-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/111-minimum-depth-of-binary-tree)|
 |112|[path-sum](https://github.com/jokerYellow/LeetCodeGo/tree/master/112-path-sum)|
 |121|[best-time-to-buy-and-sell-stock](https://github.com/jokerYellow/LeetCodeGo/tree/master/121-best-time-to-buy-and-sell-stock)|
+|125|[valid-palindrome](https://github.com/jokerYellow/LeetCodeGo/tree/master/125-valid-palindrome)|
+|137|[single-number-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/137-single-number-ii)|
 |141|[linked-list-cycle](https://github.com/jokerYellow/LeetCodeGo/tree/master/141-linked-list-cycle)|
 |142|[linked-list-cycle-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/142-linked-list-cycle-ii)|
 |146|[lru-cache](https://github.com/jokerYellow/LeetCodeGo/tree/master/146-lru-cache)|
@@ -80,6 +83,7 @@
 |167|[two-sum-ii-input-array-is-sorted](https://github.com/jokerYellow/LeetCodeGo/tree/master/167-two-sum-ii-input-array-is-sorted)|
 |168|[excel-sheet-column-title](https://github.com/jokerYellow/LeetCodeGo/tree/master/168-excel-sheet-column-title)|
 |174|[dungeon-game](https://github.com/jokerYellow/LeetCodeGo/tree/master/174-dungeon-game)|
+|199|[binary-tree-right-side-view](https://github.com/jokerYellow/LeetCodeGo/tree/master/199-binary-tree-right-side-view)|
 |203|[remove-linked-list-elements](https://github.com/jokerYellow/LeetCodeGo/tree/master/203-remove-linked-list-elements)|
 |206|[reverse-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/206-reverse-linked-list)|
 |208|[implement-trie-prefix-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/208-implement-trie-prefix-tree)|
@@ -88,9 +92,13 @@
 |218|[the-skyline-problem](https://github.com/jokerYellow/LeetCodeGo/tree/master/218-the-skyline-problem)|
 |219|[contains-duplicate-ii](https://github.com/jokerYellow/LeetCodeGo/tree/master/219-contains-duplicate-ii)|
 |220|[contains-duplicate-iii](https://github.com/jokerYellow/LeetCodeGo/tree/master/220-contains-duplicate-iii)|
+|226|[invert-binary-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/226-invert-binary-tree)|
+|231|[power-of-two](https://github.com/jokerYellow/LeetCodeGo/tree/master/231-power-of-two)|
 |234|[palindrome-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/234-palindrome-linked-list)|
 |237|[delete-node-in-a-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/237-delete-node-in-a-linked-list)|
 |239|[sliding-window-maximum](https://github.com/jokerYellow/LeetCodeGo/tree/master/239-sliding-window-maximum)|
+|326|[power-of-three](https://github.com/jokerYellow/LeetCodeGo/tree/master/326-power-of-three)|
+|342|[power-of-four](https://github.com/jokerYellow/LeetCodeGo/tree/master/342-power-of-four)|
 |367|[valid-perfect-square](https://github.com/jokerYellow/LeetCodeGo/tree/master/367-valid-perfect-square)|
 |372|[super-pow](https://github.com/jokerYellow/LeetCodeGo/tree/master/372-super-pow)|
 |384|[shuffle-an-array](https://github.com/jokerYellow/LeetCodeGo/tree/master/384-shuffle-an-array)|
@@ -109,6 +117,7 @@
 |876|[middle-of-the-linked-list](https://github.com/jokerYellow/LeetCodeGo/tree/master/876-middle-of-the-linked-list)|
 |885|[spiral-matrix-iii](https://github.com/jokerYellow/LeetCodeGo/tree/master/885-spiral-matrix-iii)|
 |916|[word-subsets](https://github.com/jokerYellow/LeetCodeGo/tree/master/916-word-subsets)|
+|965|[univalued-binary-tree](https://github.com/jokerYellow/LeetCodeGo/tree/master/965-univalued-binary-tree)|
 |1003|[check-if-word-is-valid-after-substitutions](https://github.com/jokerYellow/LeetCodeGo/tree/master/1003-check-if-word-is-valid-after-substitutions)|
 |1105|[filling-bookcase-shelves](https://github.com/jokerYellow/LeetCodeGo/tree/master/1105-filling-bookcase-shelves)|
 |1227|[airplane-seat-assignment-probability](https://github.com/jokerYellow/LeetCodeGo/tree/master/1227-airplane-seat-assignment-probability)|
