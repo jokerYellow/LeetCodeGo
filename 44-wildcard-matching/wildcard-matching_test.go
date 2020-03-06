@@ -13,15 +13,15 @@ type testCase struct {
 
 func Test(t *testing.T) {
 	cases := []testCase{
+		{"acdcb", "a*c?b", false},
+		{"aa", "a", false},
+		{"aa", "*", true},
 		{"bbbbbbbabbaabbabbbbaaabbabbabaaabbababbbabbbabaaabaab",
-		"b*b*ab**ba*b**b***bba",false},
+			"b*b*ab**ba*b**b***bba", false},
 		{"ho", "ho**", true},
 		{"", "?", false},
 		{"adceb", "*a*b", true},
 		{"mississippi", "m??*ss*?i*pi", false},
-		{"acdcb", "a*c?b", false},
-		{"aa", "a", false},
-		{"aa", "*", true},
 		{"cb", "?a", false},
 	}
 	for _, c := range cases {

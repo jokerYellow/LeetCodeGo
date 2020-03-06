@@ -57,62 +57,34 @@ s = "acdcb"
 p = "a*c?b"
 Output: false
 */
-//todo:too slow,should be faster
+//http://yucoding.blogspot.com/2013/02/leetcode-question-123-wildcard-matching.html
 func isMatch(s string, p string) bool {
-	//fmt.Println(s, p)
-	if p == "*" {
-		return true
-	}
-	if s == p {
-		return true
-	}
-	if p == "" {
-		return false
-	}
-	if p == "?" && len(s) == 1 {
-		return true
-	}
-	if p[0] == '?' {
-		if len(s) == 0 {
-			return false
+	i, j := 0, 0
+	starPosition := -1
+	sPosition := 0
+	for i < len(s) {
+		sc := s[i]
+		var pc uint8
+		if j < len(p) {
+			pc = p[j]
 		}
-		return isMatch(s[1:], p[1:])
-	} else if p[0] == '*' {
-		for i := 0; i < len(s); i++ {
-			if isMatch(s[i:], p[1:]) {
-				return true
-			}
-		}
-		if len(s) == 0 {
-			return isMatch(s, p[1:])
-		}
-		return false
-	} else if isPureString(p) {
-		return s == p
-	} else {
-		for i := 0; i < len(p); i++ {
-			if len(s) < i {
-				return false
-			}
-			if p[i] == '*' || p[i] == '?' {
-				return isMatch(s[i:], p[i:])
-			}
-			if len(s) > i && s[i] != p[i] {
-				return false
-			}
-		}
-	}
-	return false
-}
-
-func isPureString(s string) bool {
-	if len(s) == 0 {
-		return false
-	}
-	for _, c := range s {
-		if c == '?' || c == '*' {
+		if sc == pc || pc == '?' {
+			i++
+			j++
+		} else if pc == '*' {
+			starPosition = j
+			sPosition = i
+			j++
+		} else if starPosition >= 0 {
+			j = starPosition + 1
+			i = sPosition + 1
+			sPosition++
+		} else {
 			return false
 		}
 	}
-	return true
+	for j < len(p) && p[j] == '*' {
+		j++
+	}
+	return j == len(p)
 }
