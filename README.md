@@ -1,5 +1,5 @@
 # LeetCode
- >count:119 
+ >count:120 
 
 |#|Title|
 | --- | --- |
@@ -11,6 +11,7 @@
 |6|[zigzag-conversion](https://github.com/jokerYellow/LeetCodeGo/tree/master/6-zigzag-conversion)|
 |7|[reverse-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/7-reverse-integer)|
 |8|[string-to-integer-atoi](https://github.com/jokerYellow/LeetCodeGo/tree/master/8-string-to-integer-atoi)|
+|9|[palindrome-number](https://github.com/jokerYellow/LeetCodeGo/tree/master/9-palindrome-number)|
 |11|[container-with-most-water](https://github.com/jokerYellow/LeetCodeGo/tree/master/11-container-with-most-water)|
 |12|[integer-to-roman](https://github.com/jokerYellow/LeetCodeGo/tree/master/12-integer-to-roman)|
 |13|[roman-to-integer](https://github.com/jokerYellow/LeetCodeGo/tree/master/13-roman-to-integer)|
